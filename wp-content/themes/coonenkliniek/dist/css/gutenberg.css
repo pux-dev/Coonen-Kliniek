@@ -1,0 +1,30 @@
+.wp-block {
+  min-width: 100%;
+}
+
+.sider {
+  background-color: none;
+}
+.sider .inner {
+  max-width: 830px;
+  height: 497px;
+}
+
+.acf-button {
+  color: #fff;
+  background-color: #000;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  list-style-type: disc;
+  margin-bottom: 20px;
+}
+
+.steps-carousel .item:not(:first-child),
+.testimonials-carrousel .item:not(:first-child) {
+  display: none;
+}
+
+/*# sourceMappingURL=gutenberg.css.map */

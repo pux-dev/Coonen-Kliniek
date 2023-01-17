@@ -1,0 +1,25 @@
+@use '../abstracts' as *;
+
+.review-widget {
+    .title {
+        font-size: 19px;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    .score {
+        font-size: 23px;
+        font-weight: bold;
+        gap: 13.5px;
+        line-height: 0;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    img {
+        width: 20.5px;
+        height: 19.6px;
+    }
+}

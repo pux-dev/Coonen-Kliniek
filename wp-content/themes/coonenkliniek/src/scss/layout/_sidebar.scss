@@ -1,0 +1,17 @@
+.sidebar {
+    section {
+        margin-bottom: 30px;
+    }
+
+    @media only screen and (max-width: 991px) {
+        min-width: 260px;
+
+        .sidebar-tip {
+            padding: 25px 15px 25px 15px;
+
+            .quote {
+                font-size: 20px;
+            }
+        }
+    }
+}

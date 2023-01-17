@@ -1,0 +1,64 @@
+@use '../abstracts' as *;
+
+.single-team,
+.page-template-template-sidebar,
+.single-glossary {
+    background-color: #fff;
+
+    .banner-padding {
+        padding-top: 0;
+    }
+
+    .sidebar {
+        margin-top: -100px;
+        position: relative;
+        z-index: 2;
+    }
+
+    @media only screen and (max-width: 767px) {
+        .sidebar {
+            margin-top: 0;
+        }
+    }
+}
+
+.single-team {
+    @media only screen and (max-width: 767px) {
+        .page-header {
+            margin-bottom: -20px;
+        }
+        .section {
+            order: 2;
+        }
+        .sidebar-employee {
+            .employee-img {
+                img {
+                    height: 420px;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 479px) {
+        .sidebar-employee img {
+            height: 320px;
+            border-radius: 0;
+        }
+    }
+}
+
+.content-page {
+    grid-template-columns: 7fr 3fr;
+    column-gap: 70px;
+
+    @media only screen and (max-width: 991px) {
+        padding-left: 0;
+        padding-right: 0;
+        column-gap: 30px;
+    }
+
+    @media only screen and (max-width: 767px) {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,43 @@
+@use '../abstracts' as *;
+
+/* ### USP list ### */
+.usp-list {
+    .usp-title {
+        font-weight: bold;
+        position: relative;
+        width: -moz-fit-content;
+        width: fit-content;
+        transition: $transition;
+        margin-left: 25px;
+
+        &:hover {
+            color: $color_theme_purple_light;
+            cursor: pointer;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            transition: $transition;
+        }
+
+        &::before {
+            background-image: url("data:image/svg+xml,%3Csvg id='check' xmlns='http://www.w3.org/2000/svg' width='19.801' height='14.248' viewBox='0 0 19.801 14.248'%3E%3Cg id='Group_10' data-name='Group 10' transform='translate(0 0)'%3E%3Cpath id='Path_2' data-name='Path 2' d='M19.341,72.248a1.571,1.571,0,0,0-2.221,0l-10,10L2.681,77.8A1.571,1.571,0,0,0,.46,80.023l5.553,5.553a1.57,1.57,0,0,0,2.221,0L19.341,74.47A1.571,1.571,0,0,0,19.341,72.248Z' transform='translate(0.001 -71.788)' fill='%23c3d600'/%3E%3C/g%3E%3C/svg%3E%0A");
+            width: 16.33px;
+            height: 11.75px;
+            left: -25px;
+            top: calc(50% - 7px);
+        }
+
+        &::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10.215' height='6.628' viewBox='0 0 10.215 6.628'%3E%3Cg id='chevron' transform='translate(10.215) rotate(90)'%3E%3Cg id='Group_11' data-name='Group 11' transform='translate(0)'%3E%3Cpath id='Path_3' data-name='Path 3' d='M1.521,0,0,1.521,3.586,5.107,0,8.693l1.521,1.521L6.628,5.107Z' fill='%2398629D'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+            width: 10.2px;
+            height: 6.6px;
+            right: -15px;
+            top: calc(50% - 3.3px);
+        }
+    }
+}

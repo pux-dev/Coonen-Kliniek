@@ -1,0 +1,38 @@
+@use '../abstracts' as *;
+.subnav {
+    font-size: 19px;
+    padding: 15px 30px;
+    border-bottom: 5px solid $color_bg;
+    margin-bottom: 80px;
+    position: sticky;
+    top: 117px;
+    background-color: #fff;
+    z-index: 2;
+
+    ul {
+        li {
+            &:not(:first-child) {
+                padding: 0 30px;
+                border-right: 2px solid $color_bg;
+
+                a {
+                    font-size: 400;
+                    color: $color_text_body;
+
+                    &.active {
+                        color: $color_theme_purple;
+                        font-weight: bold;
+                    }
+
+                    &:hover {
+                        color: $color_theme_purple;
+                    }
+                }
+            }
+
+            &:first-child {
+                font-weight: bold;
+            }
+        }
+    }
+}

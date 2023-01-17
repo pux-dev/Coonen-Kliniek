@@ -1,0 +1,8 @@
+@use '../abstracts' as *;
+
+.scroll-down {
+    position: absolute;
+    transform: rotate(90deg);
+    bottom: 90px;
+    left: 0;
+}

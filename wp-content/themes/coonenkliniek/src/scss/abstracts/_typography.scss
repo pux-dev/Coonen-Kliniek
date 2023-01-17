@@ -1,0 +1,99 @@
+@use '../abstracts' as *;
+/* #Font-Face
+================================================== */
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/PTSans-Bold.woff2') format('woff2'),
+        url('../fonts/PTSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    src: url('../fonts/NunitoSans-Bold.woff2') format('woff2'),
+        url('../fonts/NunitoSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    src: url('../fonts/NunitoSans-Regular.woff2') format('woff2'),
+        url('../fonts/NunitoSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/PTSans-Regular.woff2') format('woff2'),
+        url('../fonts/PTSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body,
+p {
+    font-family: $font_family_body;
+    font-size: $font_size_body;
+    font-style: normal;
+    color: $color_text_body;
+    line-height: $line_height_body;
+    font-weight: $font_weight_body;
+}
+p {
+    margin-bottom: $margin_font_body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font_family_heading;
+    font-size: $font_size_heading;
+    font-style: normal;
+    color: $color_text_heading;
+    line-height: $line_height_heading;
+    font-weight: $font_weight_heading;
+    margin-bottom: $margin_font_heading;
+    transition: $transition;
+}
+
+h1.page-title {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.content-page h2 {
+    font-size: $font_size_heading_h2_small;
+}
+
+h3 {
+    font-size: $font_size_heading_h3;
+}
+
+h4 {
+    font-size: $font_size_heading_h4;
+}
+
+@media only screen and (max-width: 991px) {
+    body,
+    p {
+        font-size: 16px;
+    }
+    h1,
+    h2 {
+        font-size: 26px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+}

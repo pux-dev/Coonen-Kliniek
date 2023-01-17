@@ -1,0 +1,100 @@
+@use '../abstracts' as *;
+
+form {
+    input,
+    textarea,
+    select {
+        font-family: $font_family_body;
+        font-size: $font_size_body;
+        font-style: normal;
+        color: $color_text_body;
+        line-height: $line_height_body;
+        font-weight: $font_weight_body;
+        background-color: $color_bg;
+        padding: 10px 15px;
+        border: none;
+        margin: 5px 0;
+        box-sizing: border-box;
+        width: 100%;
+
+        &[type='submit'] {
+            color: #fff;
+            padding: 15px 30px;
+            background-color: $color_theme_purple;
+            width: initial;
+            transition: $transition;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $color_theme_purple;
+            }
+        }
+    }
+
+    .half {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 15px;
+
+        input,
+        textarea {
+            margin-bottom: 0;
+        }
+    }
+
+    &.wpcf7-form {
+        textarea {
+            margin-bottom: -17px;
+        }
+
+        input[type='submit'] {
+            margin-top: 30px;
+        }
+
+        .wpcf7-acceptance {
+            label {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+            }
+
+            input {
+                width: 28px;
+                height: 28px;
+            }
+
+            span {
+                margin-left: 0;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .half {
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type='submit'] {
+            margin-top: 10px;
+        }
+    }
+}
+
+.contact-form {
+    padding: 40px;
+    background-color: $color_bg;
+    border-radius: 20px 0 60px 0;
+
+    input,
+    textarea,
+    select {
+        background-color: #fff;
+
+        &[type='submit'] {
+            background-color: $color_theme_purple;
+        }
+    }
+}

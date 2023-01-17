@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+/* ### USP ### */
+.sidebar-employee {
+    .employee-img {
+        border-radius: 15px 0 0 0;
+
+        img {
+            height: 290px;
+            object-fit: cover;
+            border-radius: 15px 0 0 0;
+        }
+    }
+}

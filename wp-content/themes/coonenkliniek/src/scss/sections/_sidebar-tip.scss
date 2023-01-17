@@ -1,0 +1,23 @@
+@use '../abstracts' as *;
+
+.sidebar-tip {
+    padding: 35px 20px 35px 25px;
+    background-color: #fff;
+
+    .employee {
+        gap: 15px;
+
+        img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 100%;
+        }
+    }
+
+    .quote {
+        font-size: 23px;
+        font-family: $font_family_heading;
+        line-height: 1.6;
+    }
+}

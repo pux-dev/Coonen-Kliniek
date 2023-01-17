@@ -1,0 +1,42 @@
+@use '../abstracts' as *;
+
+/* ### Contactformulier CTA ### */
+.contact-cta {
+    grid-template-columns: 6fr 4fr;
+
+    .employee {
+        column-gap: 25px;
+
+        img {
+            width: 130px;
+            border-radius: 100%;
+        }
+    }
+
+    .contact-form {
+        padding: 40px;
+        background-color: $color_bg;
+        border-radius: 20px 0 60px 0;
+
+        input,
+        textarea,
+        select {
+            background-color: #fff;
+
+            &[type='submit'] {
+                background-color: $color_theme_purple;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1220px) {
+        .contact-form {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    @media only screen and (max-width: 991px) {
+        grid-template-columns: 1fr;
+    }
+}

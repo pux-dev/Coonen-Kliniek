@@ -1,0 +1,57 @@
+@use '../abstracts' as *;
+
+.glossaryItemTitle {
+    font-weight: bold !important;
+}
+
+#tt {
+    #ttcont {
+        font-size: 16px !important;
+        padding: 6px 12px 14px 15px !important;
+        box-shadow: 0px 3px 10px rgb(57 106 191 / 16%);
+        -moz-box-shadow: 0px 3px 10px rgb(57 106 191 / 16%);
+        -webkit-box-shadow: 0px 3px 10px rgb(57 106 191 / 16%);
+    }
+}
+
+body .ln-letters a {
+    font-size: 16px;
+    border: 1px solid $color_bg;
+    transition: $transition;
+    cursor: pointer;
+}
+
+.ln-letters a.ln-disabled {
+    color: #ccc;
+    cursor: default;
+}
+
+body .ln-letters a.ln-last {
+    border-right: 1px solid $color_bg;
+}
+
+body .ln-letters a:hover,
+body .ln-letters a.ln-selected {
+    color: #fff;
+    background-color: $color_theme_purple;
+}
+
+body .ln-letters a.ln-disabled:hover {
+    background-color: $color_bg;
+}
+
+body span.glossaryLink,
+body a.glossaryLink {
+    border-bottom: dotted 1px $color_theme_purple !important;
+    color: #000000 !important;
+}
+
+.single-glossary {
+    .banner-padding {
+        padding-top: 0;
+    }
+
+    .cmtt-backlink-top {
+        display: none;
+    }
+}

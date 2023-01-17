@@ -1,0 +1,103 @@
+@use '../abstracts' as *;
+
+/* ### FAQ ### */
+.faq {
+    ul {
+        text-align: left;
+        margin-left: 0;
+
+        li {
+            width: 100%;
+            list-style-type: none;
+            position: relative;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+            text-align: left;
+            background-color: #fff;
+            border-bottom: 1px solid #e9eff1;
+            margin-bottom: 0;
+
+            &.active {
+                .open-icon:after {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+
+            .question {
+                font-weight: bold;
+                padding: 25px 65px 25px 25px;
+                margin-bottom: 0;
+                transition: $transition;
+
+                &:hover {
+                    color: $color_theme_purple;
+                }
+            }
+
+            .answer {
+                display: none;
+                padding: 15px 25px;
+                max-width: 1034px;
+                position: relative;
+
+                .inner {
+                    padding: 20px;
+                    background-color: #f0f0f0;
+                }
+
+                p {
+                    &:before {
+                        content: '';
+                        width: 20px;
+                        height: 20px;
+                        background-color: #f0f0f0;
+                        transform: rotate(45deg);
+                        top: 10px;
+                        left: 50px;
+                        position: absolute;
+                    }
+                }
+            }
+
+            .open-icon {
+                position: absolute;
+                top: 20px;
+                right: 34px;
+                width: 30px;
+                height: 30px;
+                border: 2px solid $color_theme_purple;
+                border-radius: 100%;
+
+                &:before,
+                &:after {
+                    content: '';
+                    background-color: $color_theme_purple;
+
+                    position: absolute;
+                }
+
+                &:before {
+                    width: 12px;
+                    height: 2.4px;
+                    top: calc(50% - 1.2px);
+                    left: calc(50% - 6px);
+                }
+
+                &:after {
+                    width: 2.4px;
+                    height: 12px;
+                    top: calc(50% - 6px);
+                    left: calc(50% - 1.2px);
+                    transition: $transition;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .faq li {
+            margin-bottom: 15px;
+        }
+    }
+}

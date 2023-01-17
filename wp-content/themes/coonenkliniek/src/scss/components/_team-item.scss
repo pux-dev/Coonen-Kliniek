@@ -1,0 +1,31 @@
+@use '../abstracts' as *;
+.post-type-archive-team {
+    .item {
+        a {
+            color: $color_text_body;
+
+            &:hover {
+                color: $color_theme_purple;
+            }
+        }
+
+        h4 {
+            margin-bottom: 0 !important;
+
+            &:hover {
+                color: $color_theme_purple;
+            }
+        }
+
+        .tel {
+            margin-top: 10px;
+        }
+
+        .image-holder {
+            img {
+                height: 285px;
+                object-fit: cover;
+            }
+        }
+    }
+}

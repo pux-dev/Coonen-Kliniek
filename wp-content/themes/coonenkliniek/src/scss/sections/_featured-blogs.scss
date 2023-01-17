@@ -1,0 +1,120 @@
+@use '../abstracts' as *;
+
+/* ### Featured / Uitgelicht ### */
+.featured-blogs {
+    // Algemene Items
+
+    .items {
+        position: relative;
+
+        .item {
+            &:hover {
+                h4 {
+                    color: $color_theme_purple;
+                }
+                .read-more::after {
+                    right: -25px;
+                }
+            }
+
+            .image-holder {
+                border-radius: 20px 0 0 0;
+            }
+        }
+
+        .read-more {
+            position: absolute;
+            right: 20px;
+            bottom: -45px;
+        }
+    }
+
+    // Items linkerzijde
+    .left {
+        border-radius: 20px 0px 60px 0px;
+        box-shadow: 0px 3px 10px rgb(57 106 191 / 16%);
+        height: 100%;
+
+        .item {
+            height: 100%;
+        }
+
+        .inner {
+            box-shadow: none;
+            height: 100%;
+
+            img {
+                height: 330px;
+                border-radius: 20px 0 0 0;
+            }
+        }
+    }
+
+    // Items rechterzijde
+    .right {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 28px;
+
+        .item {
+            .inner {
+                display: flex;
+                border-radius: 20px 0 30px 0;
+
+                .image-holder,
+                img {
+                    width: 182.5px;
+                    height: 173px;
+                    object-fit: cover;
+                    margin-bottom: 0;
+                    border-radius: 20px 0 0 0;
+                }
+
+                .item-content {
+                    padding: 22px 20px 20px 15px;
+                    width: calc(100% - 182.5px);
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 991px) {
+        .items {
+            grid-template-columns: 1fr;
+
+            .read-more {
+                display: none;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .right {
+            .item {
+                .inner {
+                    flex-wrap: wrap;
+
+                    .item-content {
+                        width: 100%;
+                    }
+
+                    .image-holder {
+                        width: 100%;
+                        height: 330px;
+
+                        img {
+                            width: 100%;
+                            height: 330px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .left {
+            .image-holder {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

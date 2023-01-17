@@ -1,0 +1,106 @@
+@use '../abstracts' as *;
+
+.testimonial-carrousel {
+    margin-bottom: calc($section_margin + 20px);
+
+    .content {
+        p {
+            max-width: 920px;
+        }
+    }
+
+    .testimonials {
+        position: relative;
+
+        .read-more {
+            position: absolute;
+            right: 20px;
+            bottom: -20px;
+        }
+    }
+
+    .item {
+        background-color: #fff;
+        min-height: 210px;
+        padding: 20px 25px 30px;
+        border-top: 6px solid $color_theme_purple_light;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0px 3px 6px #00000029;
+
+        .name {
+            font-family: $font_family_heading;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        .stars {
+            column-gap: 13.5px;
+            margin-bottom: 15px;
+
+            img {
+                width: 21px;
+                height: 20px;
+            }
+        }
+
+        .testimonial-content {
+            max-height: 150px;
+            overflow: hidden;
+            position: relative;
+            transition: $transition;
+
+            &::after {
+                content: '';
+                height: 40px;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background: rgb(255, 255, 255);
+                background: linear-gradient(
+                    180deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 1) 100%
+                );
+            }
+        }
+    }
+
+    &.main-bg {
+        .item {
+            background-color: $color_bg;
+
+            .testimonial-content {
+                &::after {
+                    background: linear-gradient(
+                        180deg,
+                        rgba(241, 241, 241, 0) 0%,
+                        rgb(241 241 241) 100%
+                    );
+                }
+            }
+        }
+    }
+
+    .nav {
+        position: relative;
+        width: 145px;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media only screen and (max-width: 767px) {
+        margin-bottom: 80px;
+
+        .nav {
+            margin-top: 20px;
+        }
+
+        .testimonials {
+            .read-more {
+                display: none;
+            }
+        }
+    }
+}

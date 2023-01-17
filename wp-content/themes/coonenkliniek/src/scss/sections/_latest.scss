@@ -1,0 +1,43 @@
+@use '../abstracts' as *;
+
+/* ### Latest ### */
+.latest {
+    h4 {
+        transition: $transition;
+    }
+
+    .items {
+        gap: 25px;
+    }
+
+    .img-holder {
+        overflow: hidden;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        height: 249px;
+
+        img {
+            width: 100%;
+            height: auto;
+            transition: $transition;
+        }
+    }
+
+    a {
+        &:hover {
+            h4 {
+                color: $color_theme_blue;
+            }
+
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .items {
+            grid-template-columns: 1fr;
+        }
+    }
+}

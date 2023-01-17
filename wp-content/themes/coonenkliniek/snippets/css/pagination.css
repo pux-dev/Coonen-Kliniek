@@ -1,0 +1,21 @@
+/*Snippet voor blog (index) pagination. Kopieer naar css file (pas niet aan) */
+.pagination { width: 100%; padding-right: 15px; padding-left: 15px; }
+.pagination h2 { display: none; }
+.pagination > div { height: 100px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+.pagination > div a, .pagination > div span { width: 56px; height: 55px; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; border: 1px solid #a3a0a0; border-radius: 4px; font-size: 22px; color: #a3a0a0; font-family: "ABeeZee", sans-serif; position: relative; margin: 0 5px; }
+.pagination > div a.next, .pagination > div a.prev, .pagination > div span.next, .pagination > div span.prev { width: 30px; height: 2px; border: 0; border-radius: 0; margin-right: 15px; margin-left: 15px; }
+.pagination > div a.next:hover, .pagination > div a.prev:hover, .pagination > div span.next:hover, .pagination > div span.prev:hover { border: 0; border-radius: 0; }
+.pagination > div a.prev:before, .pagination > div span.prev:before, .pagination > div a.next:before, .pagination > div span.next:before { content: ''; width: 30px; height: 2px; -webkit-transition: ease-in 0.3s; transition: ease-in 0.3s; background-color: #696969; position: absolute; left: 0; }
+.pagination > div a.next:before:hover, .pagination > div span.next:before:hover { background-color: #F5AC21; }
+.pagination > div a.prev:after, .pagination > div span.prev:after, .pagination > div a.next:after, .pagination > div span.next:after { content: ""; border: solid #696969; border-width: 0 3px 3px 0; display: inline-block; padding: 3px; position: absolute; }
+.pagination > div a.prev:after, .pagination > div span.prev:after { transform: rotate(135deg); -webkit-transform: rotate(135deg); left: 0; }
+.pagination > div a.next:after, .pagination > div span.next:after {  transform: rotate(-45deg); -webkit-transform: rotate(-45deg); right: 0;  }
+.pagination > div a:hover, .pagination > div a.current, .pagination > div span:hover, .pagination > div span.current { color: #1D1616; border: 1px solid #000; }
+
+@media only screen and (max-width: 767px) { 
+    .pagination { padding-right: 0; padding-left: 0; } 
+    .pagination > div { padding-left: 15px; height: auto; margin-bottom: 30px; justify-content: flex-start; }
+    .pagination > div a, .pagination > div span { width: 40px; height: 40px; font-size: 18px; margin-right: 3px; margin-left: 3px; }
+    .pagination > div a.next, .pagination > div a.prev, .pagination > div span.next, .pagination > div span.prev { margin-right: 8px; margin-left: 8px; }
+    .pagination > div a.prev:after, .pagination > div span.prev:after { top: -14px; }
+}

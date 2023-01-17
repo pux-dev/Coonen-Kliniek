@@ -1,0 +1,154 @@
+@use '../abstracts' as *;
+
+footer {
+    color: $color_text_body;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    background-color: #f3f4f7;
+    border-top: 5px solid $color_theme_purple_light;
+
+    p,
+    a {
+        font-size: 18px;
+        color: $color_text_body;
+    }
+
+    a {
+        &:hover {
+            color: $color_theme_purple;
+        }
+    }
+
+    .title {
+        font-family: $font_family_heading;
+        font-size: $font_size_heading_h4;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .top-footer {
+        .inner {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.573);
+            padding-bottom: 20px;
+        }
+
+        .logo {
+            img,
+            svg {
+                max-width: 260px;
+                height: auto;
+            }
+
+            svg {
+                path {
+                    fill: $color_text_light;
+                }
+            }
+        }
+
+        .partners {
+            gap: 50px;
+
+            img {
+                max-height: 54px;
+            }
+        }
+    }
+
+    .holder {
+        margin-top: 50px;
+    }
+
+    .widget {
+        input {
+            width: calc(100% - 30px);
+        }
+        .send {
+            position: absolute;
+            right: 15px;
+            top: calc(50% - 10px);
+        }
+    }
+
+    .social {
+        display: flex;
+        gap: 7px;
+        margin-top: 15px;
+
+        a {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+        }
+
+        img {
+            max-width: 30px;
+        }
+    }
+
+    @media only screen and (max-width: 991px) {
+        .holder {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .top-footer {
+            .inner {
+                flex-wrap: wrap;
+
+                div {
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .holder {
+            grid-template-columns: 1fr;
+        }
+        .partners {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.subfooter {
+    padding: 10px 0;
+    background-color: #000;
+
+    body,
+    p,
+    li,
+    a {
+        font-size: 16px;
+        color: $color_text_light;
+        text-align: center;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        li:not(:last-child):after {
+            content: '|';
+            margin: 0 10px;
+
+            @media only screen and (max-width: 480px) {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            display: block;
+        }
+    }
+
+    .copy {
+        font-weight: bold;
+    }
+
+    @media only screen and (max-width: 767px) {
+        padding-bottom: 50px;
+    }
+}

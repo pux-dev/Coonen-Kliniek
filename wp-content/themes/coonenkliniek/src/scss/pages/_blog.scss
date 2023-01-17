@@ -1,0 +1,32 @@
+@use '../abstracts' as *;
+.blog-overview {
+    row-gap: 30px;
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .screen-reader-text {
+        display: none;
+    }
+
+    .navigation {
+        font-size: 23px;
+        .prev {
+            &::after {
+                content: '<';
+            }
+        }
+        .next {
+            &::after {
+                content: '>';
+            }
+        }
+    }
+
+    &.team-page {
+        .inner {
+            height: 100%;
+        }
+    }
+}

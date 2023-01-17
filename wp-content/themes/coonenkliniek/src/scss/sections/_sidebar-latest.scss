@@ -1,0 +1,58 @@
+@use '../abstracts' as *;
+
+/* ### Sidebar Latest news ### */
+.latest {
+    .item {
+        gap: 20px;
+        grid-template-columns: 1fr 4fr;
+
+        .image-holder {
+            border-radius: 10px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .excerpt {
+            padding-top: 6px;
+
+            h3 {
+                font-family: $font_family_body;
+                font-size: 15px;
+                font-weight: bold;
+            }
+
+            .date {
+                font-size: 15px;
+                color: $color_theme_blue;
+                transition: $transition;
+            }
+        }
+
+        &:hover {
+            h3 {
+                color: $color_theme_purple;
+            }
+            .excerpt .date {
+                color: $color_text_body;
+            }
+            .image-holder img {
+                transform: scale(1.1);
+            }
+        }
+    }
+    @media only screen and (max-width: 991px) {
+        .items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .items {
+            display: block;
+        }
+    }
+}

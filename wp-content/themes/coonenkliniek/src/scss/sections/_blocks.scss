@@ -1,0 +1,146 @@
+@use '../abstracts' as *;
+
+/* ### Blokken ### */
+.blocks {
+    .item {
+        background-color: #fff;
+        box-shadow: #00000029;
+        border-radius: 20px;
+        box-shadow: 0px 3px 10px rgb(57 106 191 / 16%);
+        position: relative;
+
+        img {
+            border-radius: 20px 20px 0 0;
+        }
+
+        .inner {
+            padding: 30px 25px 35px;
+            box-shadow: none;
+
+            .label {
+                font-weight: bold;
+                position: relative;
+                width: fit-content;
+                margin-bottom: 10px;
+
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 2px;
+                    background-color: $color_theme_purple_light;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+            }
+
+            .quote {
+                font-family: $font_family_heading;
+                font-size: 23px;
+                line-height: 1.5;
+                margin-bottom: 10px;
+            }
+
+            .description {
+                margin-bottom: 30px;
+            }
+        }
+
+        a.read-more {
+            position: absolute;
+            left: 25px;
+            bottom: 20px;
+        }
+
+        // 2e blok (uw situatie)
+        &:nth-of-type(2) {
+            background-color: $color_theme_purple_light;
+
+            .inner {
+                background-color: $color_theme_purple_light;
+            }
+
+            h3 {
+                font-size: 32px;
+                color: #fff;
+                font-weight: 400;
+                margin-bottom: 30px;
+            }
+
+            .situatie {
+                border-bottom: 2px solid #ffffff66;
+                display: flex;
+                column-gap: 15px;
+                padding: 15px 0;
+
+                &:first-of-type {
+                    border-top: 2px solid #ffffff66;
+                }
+
+                p {
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #fff;
+                    margin-bottom: 0;
+                }
+
+                div.image {
+                    background-color: #fff;
+                    border-radius: 100%;
+                    max-width: 30px;
+                    height: 60px;
+                    min-width: 60px;
+
+                    img {
+                        padding: 15px;
+                        border-radius: 0;
+                    }
+                }
+            }
+
+            .read-more {
+                color: #fff;
+            }
+        }
+
+        // 3e blok (teamlid)
+        &:nth-of-type(3) {
+            .employee {
+                column-gap: 15px;
+                margin-top: 40px;
+                margin-bottom: 30px;
+
+                p {
+                    margin-bottom: 0;
+                    line-height: 1;
+                }
+
+                img {
+                    max-width: 90px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 991px) {
+        .items {
+            grid-template-columns: 1fr;
+
+            .item {
+                .inner {
+                    padding: 30px 25px 60px;
+                }
+
+                &:nth-of-type(1) {
+                    order: 2;
+                }
+                &:nth-of-type(2) {
+                    order: 1;
+                }
+                &:nth-of-type(3) {
+                    order: 3;
+                }
+            }
+        }
+    }
+}

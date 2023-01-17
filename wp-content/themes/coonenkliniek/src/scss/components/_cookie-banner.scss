@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+body #cookie-notice {
+    .cookie-notice-container {
+        display: flex;
+        justify-content: center;
+        padding: 15px 45px 15px 30px;
+
+        .cn-button:not(.cn-button-custom) {
+            font-family: inherit;
+            border-radius: 0;
+            padding: 7px 15px;
+        }
+
+        #cn-notice-buttons {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        #cn-refuse-cookie {
+            border: 1px solid #fff;
+            background-color: transparent !important;
+        }
+
+        #cn-notice-text {
+            text-align: left;
+            a {
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+    }
+}

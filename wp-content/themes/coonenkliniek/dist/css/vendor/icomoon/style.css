@@ -1,0 +1,87 @@
+@font-face {
+	font-family: 'icomoon';
+	font-weight: normal;
+	font-style: normal;
+	src: url('fonts/icomoon.eot?wmsfg6');
+	src: url('fonts/icomoon.eot?wmsfg6#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?wmsfg6') format('truetype'), url('fonts/icomoon.woff?wmsfg6') format('woff'), url('fonts/icomoon.svg?wmsfg6#icomoon') format('svg');
+	font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 1;
+	text-transform: none;
+	speak: never;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-arrow-right:before {
+	content: '\e900';
+}
+.icon-facebook:before {
+	content: '\e901';
+}
+.icon-instagram1:before {
+	content: '\e905';
+}
+.icon-linkedin:before {
+	content: '\e906';
+}
+.icon-mail-icon:before {
+	color: #fff;
+	content: '\e907';
+}
+.icon-music-note:before {
+	content: '\e908';
+}
+.icon-phone-icon:before {
+	color: #fff;
+	content: '\e909';
+}
+.icon-play-btn:before {
+	content: '\e90a';
+}
+.icon-service-icon1 .path1:before {
+	color: rgb(0, 0, 0);
+	content: '\e90b';
+}
+.icon-service-icon1 .path2:before {
+	color: rgb(0, 0, 0);
+	content: '\e90c';
+}
+.icon-service-icon1 .path3:before {
+	color: rgb(0, 0, 0);
+	content: '\e90d';
+}
+.icon-service-icon1 .path4:before {
+	color: rgb(0, 0, 0);
+	content: '\e90e';
+}
+.icon-service-icon1 .path5:before {
+	color: rgb(255, 255, 255);
+	content: '\e90f';
+}
+.icon-service-icon1 .path6:before {
+	color: rgb(0, 0, 0);
+	content: '\e910';
+}
+.icon-service-icon2:before {
+	content: '\e911';
+}
+.icon-service-icon3:before {
+	content: '\e912';
+}
+.icon-service-icon4:before {
+	content: '\e913';
+}
+.icon-youtube:before {
+	content: '\e915';
+}

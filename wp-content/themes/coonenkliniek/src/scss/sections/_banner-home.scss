@@ -1,0 +1,159 @@
+@use '../abstracts' as *;
+
+.banner-home {
+    padding: 60px 0 120px;
+    background-color: #5ab1bb24;
+    position: relative;
+
+    .inner {
+        max-width: 780px;
+        position: relative;
+
+        .content {
+            text-align: center;
+
+            .badge {
+                max-width: 115px;
+                height: auto;
+            }
+        }
+
+        h4 {
+            margin-bottom: 0;
+            transition: $transition;
+        }
+
+        ul a {
+            font-size: 14px;
+            font-weight: bold;
+            color: $color_text_body;
+            background-color: #fff;
+            padding: 15px 10px;
+            border-radius: 17px;
+            box-shadow: 0px 10px 20px #396abf29;
+            margin-bottom: 40px;
+
+            &:hover {
+                color: $color_text_light;
+                background-color: $color_theme_purple;
+                transform: translate(0, -5px);
+
+                h4 {
+                    color: $color_text_light;
+                }
+
+                svg {
+                    fill: $color_text_light;
+
+                    path {
+                        fill: $color_text_light;
+                    }
+                }
+            }
+
+            img,
+            svg {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 5px;
+
+                path {
+                    transition: all 0.2s ease-in-out;
+                }
+            }
+        }
+    }
+
+    .cloud {
+        position: absolute;
+        animation: clouds;
+        animation-duration: 150s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        max-width: 200px;
+        top: 10px;
+    }
+
+    .cloud:nth-of-type(1) {
+        animation-duration: 230s;
+        max-width: 150px;
+        right: -200px;
+        animation-delay: 5s;
+    }
+
+    .cloud:nth-of-type(2) {
+        animation-duration: 340s;
+        max-width: 50px;
+    }
+
+    @keyframes clouds {
+        from {
+            right: -200px;
+        }
+        to {
+            right: 5000px;
+        }
+    }
+    overflow: hidden;
+
+    .grass {
+        position: absolute;
+        bottom: 0;
+        width: 3340px;
+        height: 43px;
+        background-image: url('../images/grass.png');
+        animation: grass;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes grass {
+        from {
+            right: -668px;
+        }
+        to {
+            right: 0;
+        }
+    }
+
+    .trees {
+        position: absolute;
+        bottom: 0;
+        width: 143px;
+        height: 116px;
+        background-image: url(../images/trees.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation: trees;
+        animation-duration: 80s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    .windmill {
+        position: absolute;
+        bottom: 2px;
+        width: 140px;
+        height: 203px;
+        right: -143px;
+        background-image: url(../images/windmill.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation: trees;
+        animation-duration: 76s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-delay: 10s;
+    }
+
+    @keyframes trees {
+        from {
+            right: -143px;
+        }
+        to {
+            right: 5000px;
+        }
+    }
+}

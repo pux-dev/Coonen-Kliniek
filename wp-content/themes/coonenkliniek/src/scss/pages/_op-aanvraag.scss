@@ -1,0 +1,31 @@
+@use '../abstracts' as *;
+
+.op-aanvraag {
+    a {
+        display: flex;
+        font-size: 17px;
+        padding: 12px 0;
+        border-top: 1px solid #cdcdcd;
+
+        h4 {
+            margin-bottom: 8px;
+        }
+
+        &:hover {
+            h4 {
+                color: $color_theme_purple;
+            }
+        }
+        .image-holder {
+            border-radius: 10px;
+            min-width: 85px;
+            margin-right: 20px;
+
+            img {
+                max-width: 81px;
+                height: 85px;
+                border-radius: 10px;
+            }
+        }
+    }
+}

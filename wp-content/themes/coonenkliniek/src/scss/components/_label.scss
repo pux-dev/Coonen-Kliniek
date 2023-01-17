@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+.label {
+    color: $color_theme_purple_light;
+    font-weight: bold;
+    position: relative;
+    width: fit-content;
+
+    &::after {
+        content: '';
+        border-bottom: 2px solid $color_theme_purple_light;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}

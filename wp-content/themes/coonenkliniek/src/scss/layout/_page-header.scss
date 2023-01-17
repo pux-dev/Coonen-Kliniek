@@ -1,0 +1,19 @@
+@use '../abstracts' as *;
+
+.page-header {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 50px;
+    background-color: #fff;
+
+    .title {
+        h1 {
+            padding-bottom: 4px;
+            margin-bottom: 0;
+        }
+    }
+
+    .functie {
+        font-size: 18px;
+    }
+}

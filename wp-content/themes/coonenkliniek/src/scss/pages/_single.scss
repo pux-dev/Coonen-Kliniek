@@ -1,0 +1,47 @@
+@use '../abstracts' as *;
+.single {
+    .content-area {
+        padding-right: calc((100% - 800px) / 2);
+        padding-left: calc((100% - 800px) / 2);
+        margin-left: auto;
+        margin-right: auto;
+
+        h1 {
+            max-width: 700px;
+        }
+
+        h2 {
+            font-size: $font_size_heading_h2_small;
+        }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        a {
+            font-weight: bold;
+        }
+
+        .wp-post-image {
+            margin-bottom: 40px;
+        }
+
+        @media only screen and (max-width: 991px) {
+            padding-left: 15px;
+            padding-right: 15px;
+
+            h1 {
+                max-width: 100%;
+            }
+
+            .wp-post-image {
+                width: 100%;
+            }
+        }
+    }
+}

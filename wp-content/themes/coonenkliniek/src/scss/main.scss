@@ -1,0 +1,81 @@
+// Abstracts
+@use 'core/reset'; //Resets
+@use 'abstracts/variables'; //Variables
+//@use 'abstracts/mixins'; //Mixins
+@use 'abstracts/typography'; //Typography
+@use 'abstracts/colors'; //Colors
+
+// Core
+@use 'core/core'; //Core
+
+// Layout
+//@use 'layout/grid'; //Grid
+@use 'layout/header'; //Header
+@use 'layout/submenu'; //Submenu
+@use 'layout/subnav'; //Subnavigatie balk
+@use 'layout/header-responsive'; // Responsive header
+//@use 'layout/search'; // Search
+//@use 'layout/navigation'; //Navigation
+//@use 'layout/sidebar'; //Sidebar
+@use 'layout/footer'; //Footer
+
+// Pages
+//@use 'pages/home'; //Homepage
+//@use 'pages/contact'; //Contact
+@use 'pages/single'; //Single page
+@use 'pages/blog'; //Blog overview
+
+// Sections
+@use 'sections/banner-page'; // page Banner
+@use 'sections/banner'; // front page Banner
+@use 'sections/blocks'; // Blokken
+@use 'sections/contact'; // Contactformulier sectie
+//@use 'sections/carrousel'; // Carrousel
+//@use 'sections/client-carrousel'; // Client/Logo Carrousel
+@use 'sections/contact-cta'; // Contactform met medewerker
+//@use 'sections/cta'; // CTA
+@use 'sections/faq'; // FAQ / Veelgestelde vragen
+@use 'sections/featured-blogs'; // Uitgelichte blogs
+//@use 'sections/featured'; // Featured
+//@use 'sections/gallery'; // Gallery
+//@use 'sections/latest'; // Latest
+@use 'sections/related'; // Gerelateerde berichten
+@use 'sections/reviews'; // Reviews
+//@use 'sections/slider'; // Slider
+@use 'sections/steps'; // Stappen Carrousel
+@use 'sections/testimonial-carrousel'; // Testimonial carrousel
+@use 'sections/text-image'; // Text & Image
+//@use 'sections/text-list'; // List
+@use 'sections/usp'; // USP
+
+// Sidebars
+//@use 'sections/sidebar-about';
+//@use 'sections/sidebar-latest';
+
+// Components
+@use 'components/buttons'; //Buttons
+@use 'components/form'; //Formulieren
+@use 'components/item'; //Standaard item (blog e.d)
+@use 'components/image-holder'; //Image holder (zoom)
+@use 'components/label'; //Label (boven de titels)
+@use 'components/nav-arrow'; //Nav arrow
+@use 'components/icons'; //Iconen (telefoon e.d.)
+
+// Specifiek voor dit thema
+@use 'layout/page-header'; //Page header
+@use 'layout/sidebar'; //Sidebar
+@use 'pages/content-page'; //Content pagina
+@use 'pages/glossary'; //Single Glossary
+@use 'sections/sidebar-employee'; // Sidebar medewerker single
+@use 'sections/sidebar-menu'; // Sidebar menu
+@use 'sections/sidebar-tip'; // Sidebar Medewerker tip
+@use 'components/read-more'; //Read more link
+@use 'components/whatsapp'; //Whatsapp button
+@use 'components/usp-list'; //USP list
+@use 'components/scroll-down'; //Scroll down banner
+@use 'components/logo-backdrop'; //Logo backdrop
+@use 'components/stripe'; //Streep boven/onder secties
+@use 'components/review-widget'; //Review widget
+@use 'components/title-stripe'; //Streep onder titels
+@use 'components/team-item'; //Team loop item
+@use 'components/cookie-banner'; //Cookie Banner

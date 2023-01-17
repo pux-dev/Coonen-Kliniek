@@ -1,0 +1,63 @@
+@use '../abstracts' as *;
+.nav {
+    .nav-arrow {
+        width: 56px;
+        height: 56px;
+        border: 2px solid $color_theme_purple_light;
+        box-shadow: 0px 3px 6px #000b2829;
+        border-radius: 100%;
+        position: absolute;
+        top: calc(50% - 28px);
+        z-index: 8;
+
+        &.prev {
+            left: 0;
+            transform: rotate(180deg);
+        }
+
+        &.next {
+            right: 0;
+        }
+
+        &::after {
+            content: '';
+            width: 21px;
+            height: 12px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20.49' height='12.065' viewBox='0 0 20.49 12.065'%3E%3Cpath d='M20.255,374.938h0l-4.183-5.06a.706.706,0,0,0-1.132,0,1.128,1.128,0,0,0,0,1.376l2.807,3.4H.8a.991.991,0,0,0,0,1.945H17.75L14.943,380a1.126,1.126,0,0,0,0,1.376.7.7,0,0,0,1.131,0l4.183-5.06h0A1.128,1.128,0,0,0,20.255,374.938Z' transform='translate(0 -369.594)' fill='%2398629D'/%3E%3C/svg%3E");
+            position: absolute;
+            top: calc(50% - 6px);
+            left: calc(50% - 10.5px);
+            transition: $transition;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color_theme_purple_light;
+
+            &::after {
+                filter: brightness(3);
+            }
+        }
+
+        &.orange {
+            background-color: $color_theme_purple;
+
+            &::after {
+                filter: brightness(3);
+            }
+
+            &:hover {
+                background-color: $color_text_body;
+            }
+        }
+    }
+
+    &.bottom {
+        position: relative;
+        display: block;
+        width: 140px;
+        height: 60px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

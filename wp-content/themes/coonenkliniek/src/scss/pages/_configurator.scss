@@ -1,0 +1,127 @@
+@use '../abstracts' as *;
+
+.configurator {
+    background: #ebebeb;
+    background: transparent
+        radial-gradient(closest-side at 50% 50%, #ffffff 0%, #ebebeb 100%);
+    min-height: calc(100vh);
+    margin-top: -180px;
+
+    h1 {
+        margin-bottom: 15px;
+    }
+
+    .holder {
+        grid-template-columns: 2fr 3fr;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .overview {
+        ul {
+            margin-top: 30px;
+        }
+        li,
+        .total p {
+            font-family: $font_family_heading;
+            font-size: 16px;
+            color: $color_text_heading;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .total {
+            margin-top: 30px;
+
+            .price {
+                font-size: 32px;
+            }
+        }
+
+        .icon-holder {
+            width: 32px;
+            height: 32px;
+            background-color: $color_theme_blue;
+            border-radius: 100%;
+
+            img {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .options {
+        position: fixed;
+        bottom: 0;
+        background-color: #ffffff;
+        box-shadow: 0px -5px 19px #00000014;
+        width: 100%;
+
+        .title {
+            font-family: $font_family_heading;
+            color: #02182b;
+            font-size: 16px;
+        }
+
+        ul {
+            text-align: center;
+            grid-template-columns: repeat(6, 1fr);
+            column-gap: 15px;
+
+            li {
+                padding: 10px 0;
+                transition: $transition;
+
+                &:hover {
+                    background-color: #ebebeb;
+                    cursor: pointer;
+
+                    .title {
+                        color: $color_theme_blue;
+                    }
+                }
+            }
+        }
+        img,
+        svg {
+            margin-bottom: 0;
+        }
+
+        &.choices {
+            bottom: 94px;
+            padding: 20px 0;
+            text-align: center;
+
+            ul {
+                grid-template-columns: repeat(5, 1fr);
+                max-width: 820px;
+                margin: 0 auto;
+
+                div {
+                    background-color: #fcfeeb;
+                    width: 50px;
+                    height: 50px;
+                    border: 2px solid #02182b4d;
+                    border-radius: 100%;
+                    margin: 0 auto;
+                }
+
+                li:nth-child(2) div {
+                    background-color: #877c80;
+                }
+                li:nth-child(3) div {
+                    background-color: #00344d;
+                }
+                li:nth-child(4) div {
+                    background-color: #7c2230;
+                }
+                li:nth-child(5) div {
+                    background-color: #5388b2;
+                }
+            }
+        }
+    }
+}

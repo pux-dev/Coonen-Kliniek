@@ -1,0 +1,26 @@
+.logo-backdrop {
+    position: relative;
+
+    &::before {
+        content: '';
+        background-image: url(../images/beeldmerk.svg);
+        background-size: cover;
+        width: 98px;
+        height: 94px;
+        position: absolute;
+        left: -45px;
+        top: -45px;
+        z-index: 1;
+        filter: contrast(0);
+        opacity: 0.2;
+    }
+
+    @media only screen and (max-width: 991px) {
+        &::before {
+            width: 70px;
+            height: 66px;
+            left: -10px;
+            top: -20px;
+        }
+    }
+}

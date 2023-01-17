@@ -1,0 +1,248 @@
+@use '../abstracts' as *;
+
+a {
+    color: $color_link;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.aligncenter {
+    text-align: center;
+    &.section {
+        .content {
+            max-width: 920px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+blockquote p {
+    font-family: $font_family_quote;
+    font-size: $font_size_quote;
+    line-height: $line_height_quote;
+    margin: $margin_quote;
+    max-width: $max_width_quote;
+}
+
+/*als bg kleur gekozen is*/
+.has-bg {
+    padding-top: $section_has_bg_padding_top;
+    padding-bottom: $section_has_bg_padding_bottom;
+
+    @media only screen and (max-width: 767px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    &.no-bg {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+.section {
+    margin-bottom: $section_margin;
+    position: relative;
+    z-index: 1;
+
+    @media only screen and (max-width: 991px) {
+        margin-bottom: $section_margin_sm;
+    }
+}
+
+/*alle content secties hebben deze klasse*/
+.rg-margin {
+    margin-bottom: $section_margin;
+}
+.lg-margin {
+    margin-bottom: $section_margin_lg;
+}
+.sm-margin {
+    margin-bottom: $section_margin_sm;
+}
+.no-margin {
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .section,
+    .rg-margin,
+    .lg-margin {
+        margin-bottom: $section_margin_sm;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .section,
+    .rg-margin,
+    .lg-margin {
+        margin-bottom: 40px;
+    }
+}
+
+/* ### global classes ### */
+.centered {
+    padding-right: calc((100% - $content_width) / 2);
+    padding-left: calc((100% - $content_width) / 2);
+}
+.centered-sm {
+    padding-right: calc((100% - $content_width_sm) / 2);
+    padding-left: calc((100% - $content_width_sm) / 2);
+}
+.grid {
+    display: grid;
+    gap: 20px;
+}
+.columns-2 {
+    grid-template-columns: 1fr 1fr;
+}
+.columns-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.columns-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.columns-5 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+@media only screen and (max-width: 767px) {
+    .columns-3 {
+        grid-template-columns: 1fr;
+    }
+    .columns-4,
+    .columns-5 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .columns-2,
+    .columns-3,
+    .columns-4,
+    .columns-5 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.flex,
+.wrap {
+    display: flex;
+}
+.jucoce {
+    justify-content: center;
+}
+.jucosp {
+    justify-content: space-between;
+}
+.jucoen {
+    justify-content: flex-end;
+}
+.alitce {
+    align-items: center;
+}
+.aliten {
+    align-items: flex-end;
+}
+.flwr {
+    flex-wrap: wrap;
+}
+.img-holder {
+    overflow: hidden;
+}
+
+@media only screen and (max-width: $content_width) {
+    .centered {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.content-area {
+    min-height: calc(100vh - 631px);
+
+    ul,
+    ol {
+        margin-left: 50px;
+        list-style-type: disc;
+        margin-bottom: 20px;
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    img {
+        border-radius: 10px;
+
+        &.size-large {
+            border-radius: 30px;
+        }
+    }
+}
+
+section {
+    .content {
+        position: relative;
+        margin-bottom: $section_content_margin;
+    }
+}
+
+//Site specifieke css
+body {
+    background-color: $color_bg;
+
+    &.white {
+        background-color: #fff;
+    }
+}
+
+a {
+    &:hover {
+        color: $color_link_hover;
+    }
+}
+
+blockquote p {
+    padding-left: 15px;
+    border-left: 7px solid $color_theme_purple_light;
+
+    @media only screen and (max-width: 991px) {
+        margin: 30px 0 30px 30px;
+    }
+
+    @media only screen and (max-width: 479px) {
+        font-size: 27px;
+        margin: 20px 0 20px 10px;
+    }
+}
+
+.main-bg {
+    background-color: #fff;
+}
+
+.second-bg {
+    background-color: $color_bg;
+}
+
+.banner-padding {
+    padding-top: 60px;
+}
+
+.shadow {
+    box-shadow: 0px 3px 10px rgb(57 106 191 / 16%);
+}
+
+main {
+    @media only screen and (max-width: 991px) {
+        margin-top: 75px;
+    }
+}

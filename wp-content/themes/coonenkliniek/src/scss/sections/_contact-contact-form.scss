@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+/* ### Contactformulier CTA ### */
+.contact-cta {
+    grid-template-columns: 6fr 4fr;
+
+    .employee {
+        column-gap: 25px;
+
+        img {
+            width: 130px;
+        }
+    }
+}

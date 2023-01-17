@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+/* ### Text Image ### */
+.page-banner {
+    background-color: $color_bg;
+    padding-top: 35px;
+    padding-bottom: 60px;
+
+    &.has-subnav {
+        margin-bottom: 0;
+    }
+
+    @media only screen and (max-width: 1320px) {
+        .scroll-down {
+            left: initial;
+            right: 50%;
+        }
+    }
+
+    @media only screen and (max-width: 1020px) {
+        .scroll-down {
+            left: initial;
+            right: 42%;
+            bottom: 70px;
+        }
+    }
+
+    @media only screen and (max-width: 991px) {
+        .scroll-down {
+            right: 0;
+        }
+    }
+}

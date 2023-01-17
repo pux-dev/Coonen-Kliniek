@@ -1,0 +1,64 @@
+@use '../abstracts' as *;
+
+.sidebar-menu {
+    border-radius: 0px 0px 30px 0px;
+
+    ul,
+    ol {
+        margin-left: 0;
+        list-style-type: none;
+        margin-bottom: 0;
+
+        li {
+            margin-bottom: 0;
+
+            a {
+                font-family: $font_family_heading;
+                font-size: 18px;
+                color: $color_text_body;
+                padding: 20px 20px 20px 40px;
+                background-color: $color_bg;
+                width: 100%;
+                display: block;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.044' height='17.019' viewBox='0 0 11.044 17.019'%3E%3Cpath d='M2.534,0,0,2.535,5.975,8.509,0,14.484l2.534,2.535,8.509-8.509Z' transform='translate(0)'/%3E%3C/svg%3E");
+                    width: 11px;
+                    height: 17px;
+                    position: absolute;
+                    left: 18px;
+                    top: calc(50% - 10px);
+                    opacity: 0.6;
+                    transition: $transition;
+                }
+            }
+
+            &:last-of-type {
+                a {
+                    border-radius: 0px 0px 30px 0px;
+                }
+            }
+        }
+    }
+    a:hover,
+    .current-menu-item a {
+        color: #fff;
+        background-color: $color_theme_purple_light;
+
+        &::before {
+            filter: invert(1);
+            opacity: 1;
+        }
+    }
+
+    @media only screen and (max-width: 991px) {
+        li {
+            a {
+                font-size: 16px;
+                padding: 10px 20px 10px 40px;
+            }
+        }
+    }
+}

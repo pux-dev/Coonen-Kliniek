@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.title-stripe {
+    position: relative;
+    margin-bottom: 5px;
+
+    &::before {
+        content: '';
+        width: 150px;
+        height: 3px;
+        background-color: $color_theme_purple_light;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}

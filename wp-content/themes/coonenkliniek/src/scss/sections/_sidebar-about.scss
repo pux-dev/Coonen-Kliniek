@@ -1,0 +1,37 @@
+@use '../abstracts' as *;
+
+/* ### Sidebar About ### */
+.about {
+    .image-holder {
+        position: relative;
+        margin-bottom: 75px;
+
+        img {
+            border-radius: 30px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .icon {
+            width: 108px;
+            height: 108px;
+            background-color: $color_theme_purple_light;
+            border-radius: 100%;
+            position: absolute;
+            left: calc(50% - 54px);
+            bottom: -54px;
+
+            img {
+                position: relative;
+                z-index: 2;
+                border-radius: 0;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 991px) {
+        .image-holder {
+            margin-bottom: 65px;
+        }
+    }
+}

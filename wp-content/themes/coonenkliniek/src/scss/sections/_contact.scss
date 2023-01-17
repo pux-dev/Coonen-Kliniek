@@ -1,0 +1,67 @@
+@use '../abstracts' as *;
+
+.contact {
+    grid-template-columns: 6fr 4fr;
+    column-gap: 60px;
+
+    .contact-details {
+        .contact-option {
+            column-gap: 15px;
+            font-size: 18px;
+            margin-bottom: 15px;
+
+            .image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 37px;
+                height: 37px;
+                background-color: $color_theme_purple;
+                border-radius: 100%;
+                margin-top: 10px;
+
+                img {
+                    border-radius: 0;
+                }
+            }
+
+            .ctc {
+                strong {
+                    display: block;
+                    margin-bottom: -5px;
+                }
+
+                a {
+                    color: $color_text_body;
+
+                    &:hover {
+                        color: $color_theme_purple;
+                    }
+                }
+            }
+        }
+    }
+
+    &.second-bg {
+        .contact-form {
+            background-color: #fff;
+
+            input:not([type='submit']),
+            textarea,
+            select {
+                background-color: $color_bg;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1220px) {
+        .contact-form {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    @media only screen and (max-width: 991px) {
+        grid-template-columns: 1fr;
+    }
+}
