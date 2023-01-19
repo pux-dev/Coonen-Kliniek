@@ -18,18 +18,18 @@ $className = 'text';
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
 }
-if( !empty($block['align']) ) {
-    $className .= ' align' . $block['align'];
-}
 
 $title          = get_field('text_title');
+$label          = get_field('text_label');
 $content        = get_field('text_content');
 $link       	= get_field('text_link');
 $width          = get_field('text_background_width');
+$heading_width  = get_field('text_heading_width');
+$align          = get_field('text_align');
 $margin         = get_field('text_margin_bottom');
 $background     = get_field('text_background_color'); ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> section centered alitce <?php if ($margin) { echo $margin; } ?> <?php if ($align) { echo $align; } ?> <?php if ($background) { echo 'has-bg' . ' ' .  $background; } ?> <?php if ($width == 'sm-width') { echo 'centered-sm'; } ?>">
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> section centered alitce <?php if ($margin) { echo $margin; } ?> <?php if ($align) { echo $align; } ?> <?php if ($background) { echo 'has-bg' . ' ' .  $background; } ?> <?php if ($width == 'sm-width') { echo 'centered-sm'; } ?> <?php if ($heading_width == 'sm-width') { echo 'heading-sm'; } ?>">
        
         <div class="content">            
 
@@ -46,10 +46,10 @@ $background     = get_field('text_background_color'); ?>
             <?php endif; ?>
 
             <?php if( $link ): 
-                $link_url = $link['url']; $link_title = $link['title']; $link_target = $link['target'] ? \ link['target'] : '_self'; ?>
-                <a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-            <?php endif; ?>            
-            
+            $link_url = $link['url']; $link_title = $link['title']; $link_target = $link['target'] ? $link['target'] : '_self'; ?>
+                <a class="read-more" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+            <?php endif; ?>
+                        
         </div>       
 
 </section>

@@ -39,13 +39,13 @@
 				}
 
 				if( $phone ): 
-				$link_url = $phone['url']; $link_title = $phone['title']; $link_target = $phone['target'] ? \ link['target'] : '_self'; ?>
-					<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">T: <?php echo esc_html( $link_title ); ?></a><br>
+				$link_url = $phone['url']; $link_title = $phone['title']; $link_target = $phone['target'] ? $phone['target'] : '_self'; ?>
+					<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 				<?php endif;
 
 				if( $email ): 
-				$link_url = $email['url']; $link_title = $email['title']; $link_target = $email['target'] ? \ link['target'] : '_self'; ?>
-					<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">E: <?php echo esc_html( $link_title ); ?></a>
+				$link_url = $email['url']; $link_title = $email['title']; $link_target = $email['target'] ? $email['target'] : '_self'; ?>
+					<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 				<?php endif; ?>
 
 				<!-- Social icons -->
@@ -155,13 +155,6 @@
 	</div>
 	<!--  \ main container / -->
 	</div>
-
-	<div class="whatsapp">
-		<a href="https://wa.me/31332537200">
-			WhatsApp ons
-		</a>
-	</div>
-		
 
 	<!--  \ wrapper / -->
 	<?php wp_footer(); ?>

@@ -91,7 +91,7 @@
                 cursor: pointer;
 
                 &:hover {
-                    color: $color_theme_purple;
+                    color: $color_theme_gold;
                 }
 
                 &:after {
@@ -119,7 +119,7 @@
 
     .reviews-bg {
         position: absolute;
-        background: $color_theme_purple;
+        background: $color_theme_gold;
         width: 100%;
         height: 600px;
         top: 0;

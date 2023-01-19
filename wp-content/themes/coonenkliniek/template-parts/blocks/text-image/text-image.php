@@ -29,9 +29,11 @@ $content        = get_field('ct_content');
 $image       	= get_field('ct_image');
 $link       	= get_field('ct_link');
 $square_image  	= get_field('ct_square_image');
+$alt_layout	    = get_field('ct_layout');
 $align 	        = get_field('ct_align');
 $margin         = get_field('ct_margin_bottom');
 $background     = get_field('ct_background_color');
+$frame_bg       = get_field('ct_frame_background_color');
 
 if ($square_image) {
     $image_size = 'square_lg';
@@ -39,33 +41,37 @@ if ($square_image) {
     $image_size = 'large';
 } ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> centered  alitce section <?php if ($margin) { echo $margin; } ?> <?php if ($align) { echo $align; } ?> <?php if ($background && $background != 'no-bg') { echo 'has-bg' . ' ' .  $background; } ?>">
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> centered  alitce section <?php if ($margin) { echo $margin; } ?> <?php if ($align) { echo $align; } ?> <?php if ($background && $background != 'no-bg') { echo 'has-bg' . ' ' .  $background; } ?> <?php if ($frame_bg) { echo 'frame-' . $frame_bg; } ?> <?php if ($alt_layout) { echo 'alt-layout'; } ?>">
        
        <div class="content">
 
-            <?php if( $label ) : ?>
-                <p class="label"><?php echo $label; ?></p>
-            <?php endif; ?>  
-        
-            <?php if( $title ) : ?>
-                <h2><?php echo $title; ?></h2>
-           <?php endif; ?>               
+           <div class="inner">
 
-           <?php if( $content ) : ?>
-               <?php echo $content; ?>
-           <?php endif; ?>
+                <?php if( $label ) : ?>
+                    <p class="label"><?php echo $label; ?></p>
+                <?php endif; ?>  
+            
+                <?php if( $title ) : ?>
+                    <h2><?php echo $title; ?></h2>
+                <?php endif; ?>               
 
-           <?php if( $link ): 
-               $link_url = $link['url']; $link_title = $link['title']; $link_target = $link['target'] ? \ link['target'] : '_self'; ?>
-               <a class="read-more" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-           <?php endif; ?>            
-           
+                <?php if( $content ) : ?>
+                    <div class="text">
+                        <?php echo $content; ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php if( $link ): 
+                $link_url = $link['url']; $link_title = $link['title']; $link_target = $link['target'] ? $link['target'] : '_self'; ?>
+                    <a class="read-more" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                <?php endif; ?>
+            
+            </div>
+
        </div>
 
        <div class="image">
-            <?php echo $new_title; ?>    
-            
-            <?php if( $image && !$image_as_drop ) : ?>
+            <?php if( $image) : ?>
                <?php echo wp_get_attachment_image( $image, $image_size, '', array( 'class' => 'image' ) ); ?>
            <?php endif ?>
            

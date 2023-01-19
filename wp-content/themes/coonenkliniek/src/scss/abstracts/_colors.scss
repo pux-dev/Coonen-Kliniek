@@ -1,13 +1,13 @@
 // # Text colors
 // =============================================== */
-$color_text_heading: #000;
+$color_text_heading: #a49974;
 $color_text_body: #000;
 $color_text_body_light: rgb(78, 78, 78);
-$color_theme_purple: #6b1d74;
-$color_theme_purple_light: #98629d;
-$color_theme_blue: #247ba0;
-$color_theme_green: #c3d600;
+$color_theme_gold: #ad9f79;
+$color_theme_gold_dark: #908055;
+$color_theme_gold_light: #efece4;
 $color_bg: #f0f0f0;
-$color_link: $color_theme_purple;
-$color_link_hover: $color_theme_purple;
-$color_text_light: #fff;
+$body_bg: #fff;
+$color_link: $color_theme_gold;
+$color_link_hover: $color_theme_gold;
+$color_text_light: $color_theme_gold_dark;

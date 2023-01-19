@@ -1,117 +1,27 @@
 @use '../abstracts' as *;
 
 .banner {
-    .inner {
-        position: relative;
-    }
+    height: 633px;
+    position: relative;
 
     .content {
-        width: 50%;
         position: relative;
         z-index: 2;
-        padding-left: 15px;
-        padding-right: 15px;
 
-        .content-holder {
-            max-width: 500px;
+        h1 {
+            font-size: 60px;
+            color: #fff;
         }
     }
 
     .banner-image {
-        width: 50%;
-        position: relative;
-
-        .image {
-            width: 100%;
-            object-fit: cover;
-        }
-
-        .review-widget {
-            color: #fff;
+        img {
             position: absolute;
-            bottom: 0;
-            left: 30px;
-
-            p,
-            .title,
-            a {
-                color: #fff;
-            }
-
-            a:hover {
-                color: $color_theme_purple_light;
-            }
-        }
-    }
-
-    // // Op grotere landscape schermen full height banner
-    // @media only screen and (min-aspect-ratio: 4/3) and (min-width: 991px) and (min-height: 600px) {
-    //     height: calc(100vh - 142px);
-
-    //     .banner-image {
-    //         img {
-    //             height: calc(100vh - 142px);
-    //         }
-    //     }
-    // }
-
-    @media only screen and (max-width: 1320px) {
-        .scroll-down {
-            left: initial;
-            right: 50%;
-        }
-    }
-
-    @media only screen and (max-width: 1020px) {
-        .content {
-            width: 65%;
-        }
-        .scroll-down {
-            left: initial;
-            right: 42%;
-            bottom: 70px;
-        }
-    }
-
-    @media only screen and (max-width: 991px) {
-        .inner {
-            flex-wrap: wrap;
-        }
-        .content,
-        .banner-image {
+            object-fit: cover;
             width: 100%;
-        }
-
-        .content {
-            padding-top: 50px;
-            padding-bottom: 50px;
-            order: 2;
-
-            .content-holder {
-                max-width: initial;
-                padding-right: 50px;
-            }
-        }
-
-        .banner-image {
-            order: 1;
-            display: inline;
-
-            img {
-                max-height: 500px;
-            }
-        }
-
-        .scroll-down {
-            right: 0;
-        }
-    }
-
-    @media only screen and (max-width: 767px) {
-        .banner-image {
-            img {
-                max-height: 350px;
-            }
+            max-height: 633px;
+            left: 0;
+            z-index: 1;
         }
     }
 }

@@ -7,7 +7,7 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: $color_theme_purple_light;
+    background-color: $color_theme_gold_light;
     z-index: 999;
     top: 0;
     transition: $transition;
@@ -52,7 +52,7 @@
         &:hover {
             cursor: pointer;
             div {
-                background-color: $color_theme_purple;
+                background-color: $color_theme_gold;
             }
         }
     }

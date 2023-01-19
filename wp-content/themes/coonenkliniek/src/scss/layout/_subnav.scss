@@ -20,12 +20,12 @@
                     color: $color_text_body;
 
                     &.active {
-                        color: $color_theme_purple;
+                        color: $color_theme_gold;
                         font-weight: bold;
                     }
 
                     &:hover {
-                        color: $color_theme_purple;
+                        color: $color_theme_gold;
                     }
                 }
             }

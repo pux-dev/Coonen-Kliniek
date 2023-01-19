@@ -56,7 +56,7 @@
         transition: $transition;
 
         &:hover {
-            background-color: $color_theme_purple;
+            background-color: $color_theme_gold;
 
             a {
                 color: #fff !important;
@@ -90,7 +90,7 @@
         .em-cal-day-date
         a {
         color: #fff !important;
-        background-color: $color_theme_purple !important;
+        background-color: $color_theme_gold !important;
     }
 
     .em.em-calendar.size-small

@@ -20,13 +20,13 @@ form {
         &[type='submit'] {
             color: #fff;
             padding: 15px 30px;
-            background-color: $color_theme_purple;
+            background-color: $color_theme_gold;
             width: initial;
             transition: $transition;
 
             &:hover {
                 cursor: pointer;
-                background-color: $color_theme_purple;
+                background-color: $color_theme_gold;
             }
         }
     }
@@ -94,7 +94,7 @@ form {
         background-color: #fff;
 
         &[type='submit'] {
-            background-color: $color_theme_purple;
+            background-color: $color_theme_gold;
         }
     }
 }

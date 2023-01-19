@@ -2,16 +2,37 @@
 
 .button {
     font-family: $font_family_heading;
-    font-weight: bold;
+    font-weight: 600;
     color: #fff;
     padding: 10px 15px;
+    border-radius: 12px 0;
     display: block;
-    background-color: $color_theme_purple;
-    margin-top: 10px;
+    background-color: $color_theme_gold;
     width: fit-content;
 
     &:hover {
-        color: #000;
-        background-color: $color_theme_green;
+        color: #fff;
+        background-color: $color_theme_gold_dark;
+    }
+}
+
+.main-bg {
+    .button {
+        background-color: #000;
+
+        &:hover {
+            color: #000;
+            background-color: $color_theme_gold_dark;
+        }
+    }
+}
+
+.light-bg {
+    .button {
+        background-color: $color_theme_gold_dark;
+
+        &:hover {
+            background-color: #000;
+        }
     }
 }

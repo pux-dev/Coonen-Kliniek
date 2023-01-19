@@ -33,7 +33,7 @@ body .ln-letters a.ln-last {
 body .ln-letters a:hover,
 body .ln-letters a.ln-selected {
     color: #fff;
-    background-color: $color_theme_purple;
+    background-color: $color_theme_gold;
 }
 
 body .ln-letters a.ln-disabled:hover {
@@ -42,7 +42,7 @@ body .ln-letters a.ln-disabled:hover {
 
 body span.glossaryLink,
 body a.glossaryLink {
-    border-bottom: dotted 1px $color_theme_purple !important;
+    border-bottom: dotted 1px $color_theme_gold !important;
     color: #000000 !important;
 }
 

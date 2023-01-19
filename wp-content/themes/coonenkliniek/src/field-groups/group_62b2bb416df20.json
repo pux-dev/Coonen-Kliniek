@@ -60,31 +60,6 @@
             "delay": 1
         },
         {
-            "key": "field_62b2be2f432fd",
-            "label": "Icoon",
-            "name": "cta_icon",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "svg, png"
-        },
-        {
             "key": "field_62b2bb417e6dd",
             "label": "Button",
             "name": "cta_link",
@@ -133,7 +108,9 @@
             },
             "choices": {
                 "no-bg": "Geen",
-                "main-bg": "Hoofdkleur"
+                "main-bg": "Hoofdkleur",
+                "light-bg": "Licht",
+                "dark-bg": "Donker"
             },
             "default_value": false,
             "return_format": "value",
@@ -187,8 +164,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": false,
+    "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1672502039
+    "modified": 1674129152
 }

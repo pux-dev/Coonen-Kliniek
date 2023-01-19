@@ -6,7 +6,7 @@ footer {
     padding-top: 50px;
     padding-bottom: 40px;
     background-color: #f3f4f7;
-    border-top: 5px solid $color_theme_purple_light;
+    border-top: 5px solid $color_theme_gold_light;
 
     p,
     a {
@@ -16,7 +16,7 @@ footer {
 
     a {
         &:hover {
-            color: $color_theme_purple;
+            color: $color_theme_gold;
         }
     }
 

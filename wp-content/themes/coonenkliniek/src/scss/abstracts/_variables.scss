@@ -6,31 +6,31 @@
 
 // # General
 // =============================================== */
-$content_width: 1230px !default;
-$content_width_sm: 1024px !default;
+$content_width: 1024px !default;
+$content_width_sm: 920px !default;
 $section_margin: 80px;
 $section_margin_lg: 110px;
 $section_margin_sm: 40px;
-$section_content_margin: 30px;
+$section_content_margin: 40px;
 $section_content_margin_lg: 65px;
-$section_has_bg_padding_top: 90px;
-$section_has_bg_padding_bottom: 90px;
+$section_has_bg_padding_top: 60px;
+$section_has_bg_padding_bottom: 65px;
 $transition: all 0.2s ease-in-out;
 
 // # Typography
 // =============================================== */
 //Body
-$font_family_body: 'PT Sans';
-$font_size_body: 16px;
-$line_height_body: 1.8;
+$font_family_body: 'Mont';
+$font_size_body: 17px;
+$line_height_body: 1.6;
 $font_weight_body: 400;
 $margin_font_body: 15px;
 
 //Headings
-$font_family_heading: 'Nunito Sans';
-$font_size_heading: 32px;
+$font_family_heading: 'Mont';
+$font_size_heading: 30px;
 $line_height_heading: 1.4;
-$font_weight_heading: 400;
+$font_weight_heading: 600;
 $margin_font_heading: 15px;
 $font_size_heading_h2_small: 26px;
 $font_size_heading_h3: 23px;

@@ -27,7 +27,7 @@
                     content: '';
                     width: 100%;
                     height: 2px;
-                    background-color: $color_theme_purple_light;
+                    background-color: $color_theme_gold_light;
                     position: absolute;
                     left: 0;
                     bottom: 0;
@@ -54,10 +54,10 @@
 
         // 2e blok (uw situatie)
         &:nth-of-type(2) {
-            background-color: $color_theme_purple_light;
+            background-color: $color_theme_gold_light;
 
             .inner {
-                background-color: $color_theme_purple_light;
+                background-color: $color_theme_gold_light;
             }
 
             h3 {

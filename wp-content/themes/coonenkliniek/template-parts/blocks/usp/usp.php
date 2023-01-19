@@ -26,14 +26,16 @@ if( !empty($block['className']) ) {
 
 $title          = get_field('usp_title');
 $content        = get_field('usp_content');
+$label          = get_field('usp_label');
 $link       	= get_field('usp_link');
 $image       	= get_field('usp_icon');
 $align          = get_field('usp_align');
 $per_row        = get_field('usp_per_row');
 $margin         = get_field('usp_margin_bottom');
+$padding        = get_field('usp_padding');
 $background     = get_field('usp_background_color'); ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> centered section <?php if ($margin) { echo $margin; } ?> <?php if ($align) { echo $align; } ?> <?php if ($per_row) { echo $per_row; } ?> <?php if ($background && $background != 'no-bg') { echo 'has-bg' . ' ' .  $background; } ?>">
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> centered section <?php if ($margin) { echo $margin; } ?> <?php if ($padding) { echo $padding; } ?> <?php if ($align) { echo $align; } ?> <?php if ($per_row) { echo $per_row; } ?> <?php if ($background && $background != 'no-bg') { echo 'has-bg' . ' ' .  $background; } ?>">
 	
 	<div class="content">
 		<?php if( $label ) : ?>
@@ -51,7 +53,7 @@ $background     = get_field('usp_background_color'); ?>
 
     <?php
     if( have_rows('usp') ): ?>
-        <ul class="usp-holder flex">
+        <ul class="items flex">
             <?php // Loop through rows.
             while( have_rows('usp') ) : the_row();
                 
@@ -61,10 +63,12 @@ $background     = get_field('usp_background_color'); ?>
                 $usp_desc = get_sub_field('usp_desc');
                 $usp_link = get_sub_field('usp_link'); ?>
 
-                <li class="item">                   
+                <li class="item">
                 
                     <?php if( $usp_icon ) : ?>
-                        <?php echo wp_get_attachment_image( $usp_icon, 'large', '', array( 'class' => 'icon' ) ); ?>
+                        <div class="icon-holder">
+                            <?php echo wp_get_attachment_image( $usp_icon, 'large', '', array( 'class' => 'icon' ) ); ?>
+                        </div>
                     <?php endif ?>
                     
                     <?php if( $usp_text ) : ?>        
@@ -76,8 +80,9 @@ $background     = get_field('usp_background_color'); ?>
                     <?php endif ?>
 
                     <?php 
+
                     if( $usp_link ): 
-                    $link_url = $usp_link['url']; $link_title = $usp_link['title']; $link_target = $usp_link['target'] ? \ link['target'] : '_self'; ?>
+                    $link_url = $usp_link['url']; $link_title = $usp_link['title']; $link_target = $usp_link['target'] ? $usp_link['target'] : '_self'; ?>
                         <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?> ></a>
                     <?php endif; ?>
 

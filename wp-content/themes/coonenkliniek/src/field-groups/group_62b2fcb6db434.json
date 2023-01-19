@@ -6,6 +6,7 @@
             "key": "field_62b2fcb6dff76",
             "label": "Content",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -22,6 +23,7 @@
             "key": "field_62b2fcb6e3a1d",
             "label": "Titel",
             "name": "usp_title",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -41,6 +43,7 @@
             "key": "field_62b2fcb6e7571",
             "label": "Content",
             "name": "usp_content",
+            "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -60,6 +63,7 @@
             "key": "field_62b2fcea05394",
             "label": "USP's",
             "name": "usp",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -74,11 +78,13 @@
             "max": 0,
             "layout": "table",
             "button_label": "Add Row",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_62b2fd0605395",
                     "label": "Icoon",
                     "name": "usp_icon",
+                    "aria-label": "",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -104,6 +110,7 @@
                     "key": "field_62b2fd1805396",
                     "label": "Tekst",
                     "name": "usp_text",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -124,6 +131,7 @@
                     "key": "field_630745a327c82",
                     "label": "Omschrijving",
                     "name": "usp_desc",
+                    "aria-label": "",
                     "type": "textarea",
                     "instructions": "",
                     "required": 0,
@@ -144,6 +152,7 @@
                     "key": "field_6345629c31171",
                     "label": "Link",
                     "name": "usp_link",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -156,13 +165,13 @@
                     "return_format": "array",
                     "parent_repeater": "field_62b2fcea05394"
                 }
-            ],
-            "rows_per_page": 20
+            ]
         },
         {
             "key": "field_62b2fcb6f2513",
             "label": "Opties",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -179,6 +188,7 @@
             "key": "field_634542875f74b",
             "label": "Uitlijning",
             "name": "usp_align",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -204,6 +214,7 @@
             "key": "field_63454347749e0",
             "label": "Items per rij",
             "name": "usp_per_row",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -231,6 +242,7 @@
             "key": "field_62b2fcb701dfa",
             "label": "Achtergrondkleur",
             "name": "usp_background_color",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -242,7 +254,9 @@
             },
             "choices": {
                 "no-bg": "Geen",
-                "main-bg": "Hoofdkleur"
+                "main-bg": "Hoofdkleur",
+                "light-bg": "Licht",
+                "dark-bg": "Donker"
             },
             "default_value": false,
             "return_format": "value",
@@ -253,9 +267,36 @@
             "placeholder": ""
         },
         {
+            "key": "field_63c82e3439e2b",
+            "label": "Padding",
+            "name": "usp_padding",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "De ruimte tussen de content en de boven- en onderzijde van de sectie",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "rg-padding": "Normaal",
+                "sm-padding": "Klein"
+            },
+            "default_value": "rg-padding",
+            "return_format": "",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_62b2fcb705a75",
             "label": "Marge onderzijde",
             "name": "usp_margin_bottom",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -298,5 +339,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1665491650
+    "modified": 1674063489
 }

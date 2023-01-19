@@ -26,14 +26,14 @@
 
             .date {
                 font-size: 15px;
-                color: $color_theme_blue;
+                color: $color_theme_gold;
                 transition: $transition;
             }
         }
 
         &:hover {
             h3 {
-                color: $color_theme_purple;
+                color: $color_theme_gold;
             }
             .excerpt .date {
                 color: $color_text_body;

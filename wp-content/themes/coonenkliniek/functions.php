@@ -35,30 +35,30 @@ define( 'GUTENBERG_PAGES', true ); //Gutenberg uit voor pages
 
 // Define Gutenberg Blocks (ACFBlocks.php)
 define( 'BANNER', false ); //Pagina banner
-define( 'BLOCKS', TRUE ); // Meerdere blokken om zaken uit te lichten
+define( 'BLOCKS', false ); // Meerdere blokken om zaken uit te lichten
 define( 'CARROUSEL', false ); // Carrousel met item slider
-define( 'CONTACT', true ); // Contactformulier met contact opties
-define( 'CONTACT_CTA', true ); // Contactformulier met medewerker gegevens
+define( 'CONTACT', false ); // Contactformulier met contact opties
+define( 'CONTACT_CTA', false ); // Contactformulier met medewerker gegevens
 define( 'CLIENT_CARROUSEL', false ); //Carrousel met logo's
-define( 'CTA_BLOCK', false ); //Call to Action
-define( 'FAQ', true ); // Veelgestelde vragen
-define( 'FEATURED_BLOGS', true ); // Uitgelichte blogs
+define( 'CTA_BLOCK', true ); //Call to Action
+define( 'FAQ', false ); // Veelgestelde vragen
+define( 'FEATURED_BLOGS', false ); // Uitgelichte blogs
 define( 'FULLWIDTH_BLOCK', true ); //Tekstblok volledige breedte
 define( 'GALLERY', false ); //Afbeeldingen gallerij
 define( 'LATEST_NEWS', false ); //Laatste nieuwsitems
 define( 'TEXT_LIST', false ); //
 define( 'TEXTIMAGE_BLOCK', true ); //Tekstblok met afbeelding
-define( 'USP_BLOCK', false ); //Unique Selling Points
+define( 'USP_BLOCK', true ); //Unique Selling Points
 define( 'TEAM', false ); //Teamleden
 define( 'REVIEWS_BLOCK', false ); //Sectie met reviews en Testimonials
 define( 'SLIDER', false ); // Slider
-define( 'STEPS', TRUE ); // Stappen Carrousel
+define( 'STEPS', false ); // Stappen Carrousel
 define( 'FEATURED', false ); // Uitgelichte items
-define( 'TESTIMONIAL_CARROUSEL', true ); //Testimonial Carrousel
+define( 'TESTIMONIAL_CARROUSEL', false ); //Testimonial Carrousel
 
 //Define Custom Post Types
-define( 'CPT_TEAM', true ); //Team 
-define( 'CPT_TESTIMONIALS', true ); //Testimonials
+define( 'CPT_TEAM', false ); //Team 
+define( 'CPT_TESTIMONIALS', false ); //Testimonials
 
 /*
 //Widgets
@@ -132,8 +132,8 @@ define( 'GOOGLE_MAPS', false );
 
 add_filter('acf/upload_prefilter/name=banner_image', 'banner_filter', 10, 3);
 function banner_filter( $errors, $file, $field ){  
-	add_image_size( 'banner', 585, 550, true );
-	add_image_size( 'banner_lg', 1170, 1100, true );
+	add_image_size( 'banner', 1280, 637, true );
+	add_image_size( 'banner_lg', 1920, 955, true );
 }
 
 

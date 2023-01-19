@@ -108,7 +108,7 @@
             },
             "choices": {
                 "alignleft": "Links",
-                "alignright": "Rechts"
+                "aligncenter": "Gecentreerd"
             },
             "default_value": "alignleft",
             "return_format": "value",
@@ -134,8 +134,9 @@
             },
             "choices": {
                 "no-bg": "Geen",
-                "main-bg": "Wit",
-                "second-bg": "Grijs"
+                "main-bg": "Hoofdkleur",
+                "light-bg": "Licht",
+                "dark-bg": "Donker"
             },
             "default_value": false,
             "return_format": "value",
@@ -152,6 +153,32 @@
             "aria-label": "",
             "type": "select",
             "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "rg-width": "Normaal",
+                "sm-width": "Smal"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_63c8f43b1a720",
+            "label": "Breedte titel",
+            "name": "text_heading_width",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Je kunt de titel minder breed maken dan de tekst",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -218,5 +245,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1672500146
+    "modified": 1674114771
 }

@@ -31,7 +31,7 @@
                 transition: $transition;
 
                 &:hover {
-                    color: $color_theme_purple;
+                    color: $color_theme_gold;
                 }
             }
 
@@ -66,13 +66,13 @@
                 right: 34px;
                 width: 30px;
                 height: 30px;
-                border: 2px solid $color_theme_purple;
+                border: 2px solid $color_theme_gold;
                 border-radius: 100%;
 
                 &:before,
                 &:after {
                     content: '';
-                    background-color: $color_theme_purple;
+                    background-color: $color_theme_gold;
 
                     position: absolute;
                 }

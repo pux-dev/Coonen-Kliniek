@@ -1,14 +1,14 @@
 @use '../abstracts' as *;
 
 .label {
-    color: $color_theme_purple_light;
-    font-weight: bold;
+    color: $color_text_body;
+    font-weight: 600;
     position: relative;
     width: fit-content;
 
     &::after {
         content: '';
-        border-bottom: 2px solid $color_theme_purple_light;
+        border-bottom: 1px solid $color_theme_gold;
         width: 100%;
         position: absolute;
         bottom: 0;

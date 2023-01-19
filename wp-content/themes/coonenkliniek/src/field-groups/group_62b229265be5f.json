@@ -89,12 +89,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "return_format": "id",
-            "preview_size": "medium",
             "library": "all",
             "min_width": 500,
             "min_height": 500,
@@ -102,7 +101,8 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ""
+            "mime_types": "",
+            "preview_size": "medium"
         },
         {
             "key": "field_62b22cce81b30",
@@ -119,6 +119,26 @@
                 "id": ""
             },
             "return_format": "array"
+        },
+        {
+            "key": "field_63c9044228a7d",
+            "label": "Gebruik kader layout?",
+            "name": "ct_layout",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Om de layout aan te passen naar tekstkader met gekleurde achtergrond",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_63442ed454322",
@@ -199,8 +219,45 @@
             },
             "choices": {
                 "no-bg": "Geen",
-                "main-bg": "Wit",
-                "second-bg": "Grijs"
+                "main-bg": "Hoofdkleur",
+                "light-bg": "Licht",
+                "dark-bg": "Donker"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_63c92a9a37d9a",
+            "label": "Achtergrond kader",
+            "name": "ct_frame_background_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63c9044228a7d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no-bg": "Geen",
+                "main-bg": "Hoofdkleur",
+                "light-bg": "Licht",
+                "dark-bg": "Donker"
             },
             "default_value": false,
             "return_format": "value",
@@ -257,5 +314,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1672500149
+    "modified": 1674128114
 }

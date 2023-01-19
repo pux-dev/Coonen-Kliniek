@@ -1,14 +1,13 @@
 @use '../abstracts' as *;
 
 .cta {
-    color: #fff;
-    gap: 80px;
+    gap: 150px;
     overflow: hidden;
 
     h2,
     p,
     body {
-        color: #fff;
+        text-transform: none;
     }
 
     .button {
@@ -16,22 +15,14 @@
         margin-bottom: 20px;
     }
 
-    .icon {
-        position: absolute;
-        left: calc(50% - 735px);
-        max-width: 315px;
+    .left {
+        position: relative;
+        margin-top: -60px;
+        margin-bottom: -65px;
+        height: calc(100% + 125px);
 
-        img,
-        svg {
-            width: 100%;
-            opacity: 0.4;
-            transform: rotate(15deg);
+        img {
+            min-height: 100%;
         }
-    }
-
-    @media only screen and (max-width: 767px) {
-        flex-wrap: wrap;
-        gap: 10px;
-        text-align: center;
     }
 }

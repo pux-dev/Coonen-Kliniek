@@ -60,62 +60,6 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_639b35c5504c6",
-            "label": "Subnavigatie gebruiken?",
-            "name": "has_subnav",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "Vink aan als je een navigatiebalk onder de banner wilt tonen",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_637b54f11635d",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "33.33",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_63a5a421d9106",
-            "label": "USP's in banner?",
-            "name": "banner_usp",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "Vink aan als je een navigatiebalk onder de banner wilt tonen",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_637b54f11635d",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "33.33",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
             "key": "field_638c8de0672c0",
             "label": "Pagina achtergrondkleur",
             "name": "page_bg",
@@ -260,7 +204,7 @@
             "name": "banner_image",
             "aria-label": "",
             "type": "image",
-            "instructions": "<strong>Let op:<\/strong> upload een nieuwe afbeelding (dus niet een bestaande via mediabibliotheek). De afbeelding wordt dan automatisch naar juiste formaat bijgesneden. Perfect formaat is 1170 x 1100 pixels.",
+            "instructions": "<strong>Let op:<\/strong> upload een nieuwe afbeelding (dus niet een bestaande via mediabibliotheek). De afbeelding wordt dan automatisch naar juiste formaat bijgesneden. Perfect formaat is 1920 x 955 pixels.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -288,135 +232,11 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_63b2afdf6cec4",
-            "label": "Subnavigatie",
-            "name": "",
+            "key": "field_63c82c487cec8",
+            "label": "Marge onderzijde",
+            "name": "banner_margin_bottom",
             "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_639b35c5504c6",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_63b2afea6cec5",
-            "label": "Subnavigatie",
-            "name": "banner_subnav",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_637b54f11635d",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "table",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Nieuwe regel",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_63b2b0046cec6",
-                    "label": "Titel",
-                    "name": "banner_subnav_title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_63b2afea6cec5"
-                },
-                {
-                    "key": "field_63b2b0106cec7",
-                    "label": "ID",
-                    "name": "banner_subnav_id",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_63b2afea6cec5"
-                }
-            ]
-        },
-        {
-            "key": "field_638f358ea920c",
-            "label": "Banner USP",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_63a5a421d9106",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_63b06663ed9c3",
-            "label": "USP's",
-            "name": "banner_usp_items",
-            "aria-label": "",
-            "type": "repeater",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -425,57 +245,19 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "table",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Nieuwe regel",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_63b0667ded9c4",
-                    "label": "Titel",
-                    "name": "banner_usp_iem_title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_63b06663ed9c3"
-                },
-                {
-                    "key": "field_63b06691ed9c5",
-                    "label": "Inhoud",
-                    "name": "banner_usp_iem_content",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "rows": 3,
-                    "placeholder": "",
-                    "new_lines": "",
-                    "parent_repeater": "field_63b06663ed9c3"
-                }
-            ]
+            "choices": {
+                "rg-margin": "Normaal",
+                "lg-margin": "Groot",
+                "sm-margin": "Klein",
+                "no-margin": "Geen"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -501,5 +283,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1672655370
+    "modified": 1674063370
 }

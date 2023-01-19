@@ -15,48 +15,72 @@ $has_banner = get_field('has_banner'); ?>
 	<!--  / main container \ -->
 	<div id="mainCntr">
 		<!--  / header container \ -->
-		<header id="headerCntr" class="centered">
-			<div class="headerBox flex jucosp">
+		<header id="headerCntr">
+			<div class="headerBox flex flwr">
 
-				<?php 
-				if( $logo ) : ?>
-					<!--  / logo box \ -->
-					<a class="logo" href="/">
-						<?php echo wp_get_attachment_image( $logo, 'large', '', array( 'class' => 'logo' ) ); ?>
-					</a>
-					<!--  \ logo box / -->
-				<?php endif ?>
+				<!-- /// Top Menu \\ -->
+				<div class="top-menu flex jucosp">
+					
+					<div class="left">
+						<a href="/">COONEN KLINIEK</a> & <a href="#">COONEN COOLSCULPTING</a>						  	
+					</div>
 
-				<div class="menu">
-					
-					
-					<div class="top-menu flex jucoen alitce">						
+					<div class="right flex">
 						<?php if( $phone ): 
-						$link_url = $phone['url']; $link_title = $phone['title']; $link_target = $phone['target'] ? \ link['target'] : '_self'; ?>
-							<a  href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/phone.svg" alt="phone-icon"><span><?php echo esc_html( $link_title ); ?></span></a>
+							$link_url = $phone['url']; $link_title = $phone['title']; $link_target = $phone['target'] ? $phone['target'] : '_self'; ?>
+							<a  href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 						<?php endif; ?>
+
+						/
 
 						<?php if( $email ): 
-						$link_url = $email['url']; $link_title = $email['title']; $link_target = $email['target'] ? \ link['target'] : '_self'; ?>
-							<a  href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/email.svg" alt="email-icon"><span><?php echo esc_html( $link_title ); ?></span></a>
-						<?php endif; ?>
+							$link_url = $email['url']; $link_title = $email['title']; $link_target = $email['target'] ? $email['target'] : '_self'; ?>
+							<a  href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+						<?php endif; ?>						
 					</div>
+					
+				</div>
+				<!-- \\ Top Menu /// -->
 
-					<div class="bottom-menu">
-						<!--  / menu box \ -->
-						<?php
-							wp_nav_menu( [
-								'theme_location' => 'primary-menu',						
-								'container'       => 'ul',																	
-							] );
-							?>					
-							
-						<!--  \ menu box / -->
+					<!-- /// Bottom Menu \\ -->
+					<div class="bottom-menu flex jucosp alitce">
+
+						<!-- /// Left \\ -->
+						<div class="left">
+							<?php 
+							if( $logo ) : ?>
+								<!--  / logo box \ -->
+								<a class="logo" href="/">
+									<?php echo wp_get_attachment_image( $logo, 'large', '', array( 'class' => 'logo' ) ); ?>
+								</a>
+								<!--  \ logo box / -->
+							<?php endif ?>
+						</div>
+						<!-- \\ Left /// -->	
+
+						<!-- /// Right \\ -->
+						<div class="right flex alitce">
+							<!--  / menu box \ -->
+							<?php
+								wp_nav_menu( [
+									'theme_location' => 'primary-menu',						
+									'container'       => 'ul',																	
+								] );
+								?>					
+								
+							<!--  \ menu box / -->
+
+							<a href="#" class="button">Maak een afspraak</a>
+						</div>
+						<!-- \\ Right /// -->
+						
 					</div>
+					<!-- \\ Bottom Menu /// -->
+
 				</div>
 			</div>
 
-			<nav class="mobilemenu" id="mobilemenu">
+			<nav class="mobilemenu" id="mobilemenu" style="display: none;">
 				<!--  / menu box \ -->
 				<?php
 							wp_nav_menu( [

@@ -1,9 +1,13 @@
 @use '../abstracts' as *;
 
+body {
+    background-color: $body_bg;
+}
+
 a {
     color: $color_link;
     text-decoration: none;
-    transition: all 0.2s ease-in-out;
+    transition: $transition;
 }
 
 img {
@@ -93,6 +97,11 @@ blockquote p {
 .centered-sm {
     padding-right: calc((100% - $content_width_sm) / 2);
     padding-left: calc((100% - $content_width_sm) / 2);
+
+    &.aligncenter {
+        padding-right: calc((100% - 760px) / 2);
+        padding-left: calc((100% - 760px) / 2);
+    }
 }
 .grid {
     display: grid;
@@ -179,14 +188,6 @@ blockquote p {
     ol {
         list-style-type: decimal;
     }
-
-    img {
-        border-radius: 10px;
-
-        &.size-large {
-            border-radius: 30px;
-        }
-    }
 }
 
 section {
@@ -197,52 +198,79 @@ section {
 }
 
 //Site specifieke css
-body {
-    background-color: $color_bg;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+}
 
-    &.white {
-        background-color: #fff;
+h1.page-title {
+    text-transform: none;
+}
+
+h2 {
+    span {
+        color: #000;
     }
 }
 
-a {
-    &:hover {
-        color: $color_link_hover;
+section {
+    &.main-bg {
+        background-color: $color_theme_gold;
+
+        h2 {
+            color: #fff;
+        }
+
+        .read-more {
+            color: #fff;
+
+            &:hover {
+                color: #000;
+            }
+
+            &::after {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.631' height='8.888' viewBox='0 0 12.631 8.888'%3E%3Cg transform='translate(53.696 -133)'%3E%3Cg transform='translate(0 131)'%3E%3Cpath d='M18.364,135.937h0l-3.756-3.727a.718.718,0,0,0-1.014,1.016l2.522,2.5-9.452-.209a.717.717,0,1,0,0,1.434l9.452.209-2.522,2.5a.718.718,0,0,0,1.014,1.016l3.756-3.727h0A.716.716,0,0,0,18.364,135.937Z' transform='translate(-59.639 -130)' fill='%23ffffff'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            }
+        }
+    }
+
+    &.light-bg {
+        background-color: #efece4;
+
+        h2 {
+            color: $color_theme_gold_dark;
+        }
+    }
+    &.dark-bg {
+        background-color: #000;
+
+        h2 {
+            span {
+                color: #fff;
+            }
+        }
+
+        p {
+            color: #fff;
+        }
+
+        .read-more {
+            color: $color_theme_gold;
+        }
     }
 }
 
-blockquote p {
-    padding-left: 15px;
-    border-left: 7px solid $color_theme_purple_light;
-
-    @media only screen and (max-width: 991px) {
-        margin: 30px 0 30px 30px;
-    }
-
-    @media only screen and (max-width: 479px) {
-        font-size: 27px;
-        margin: 20px 0 20px 10px;
-    }
+section.sm-padding {
+    padding-top: 35px;
+    padding-bottom: 45px;
 }
 
-.main-bg {
-    background-color: #fff;
-}
-
-.second-bg {
-    background-color: $color_bg;
-}
-
-.banner-padding {
-    padding-top: 60px;
-}
-
-.shadow {
-    box-shadow: 0px 3px 10px rgb(57 106 191 / 16%);
-}
-
-main {
-    @media only screen and (max-width: 991px) {
-        margin-top: 75px;
+.heading-sm {
+    h2 {
+        max-width: 580px;
     }
 }

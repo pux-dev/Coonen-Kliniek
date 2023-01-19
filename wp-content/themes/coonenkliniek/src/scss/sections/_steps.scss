@@ -19,7 +19,7 @@
                 position: absolute;
                 left: -20px;
                 top: 6px;
-                border: 2px solid $color_theme_green;
+                border: 2px solid $color_theme_gold;
                 z-index: -1;
             }
 
@@ -42,7 +42,7 @@
             .number {
                 font-family: $font_family_heading;
                 font-size: 23px;
-                border: 2px solid $color_theme_purple_light;
+                border: 2px solid $color_theme_gold_light;
                 border-radius: 100%;
                 width: 50px;
                 height: 50px;
@@ -80,8 +80,8 @@
             &.active {
                 .number {
                     color: #fff;
-                    background-color: $color_theme_purple;
-                    border-color: $color_theme_purple;
+                    background-color: $color_theme_gold;
+                    border-color: $color_theme_gold;
                 }
 
                 .step-desc {
