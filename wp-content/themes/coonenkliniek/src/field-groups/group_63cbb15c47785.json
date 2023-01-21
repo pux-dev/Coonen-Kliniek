@@ -1,0 +1,155 @@
+{
+    "key": "group_63cbb15c47785",
+    "title": "Gutenberg Diensten",
+    "fields": [
+        {
+            "key": "field_63cbb15c57496",
+            "label": "Content",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_63cbb15c5af37",
+            "label": "Titel",
+            "name": "text_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Tekstblok volledige breedte",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_63cbb15c5e9c2",
+            "label": "Content",
+            "name": "text_content",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Dit is een algemeen tekstblok. Gebruik deze voor algemene content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor ante elementum, malesuada augue quis, maximus nibh. Morbi purus justo, malesuada ultricies feugiat non, pharetra eget nisl. Sed lacus risus, pulvinar eget cursus eget, cursus sed tortor. Vivamus vehicula eros a lectus eleifend, id sollicitudin orci aliquam. Suspendisse aliquet molestie ipsum id ultricies. Duis et porttitor ante. Suspendisse vel tincidunt arcu. Duis nisl orci, dapibus a placerat vitae, lacinia semper ante. Sed id ex in nisl luctus suscipit. Sed feugiat sem elit, eget euismod lectus malesuada eu.",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 1
+        },
+        {
+            "key": "field_63cbb15c65ee0",
+            "label": "Opties",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_63cbb15c6d40d",
+            "label": "Achtergrond",
+            "name": "text_background_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no-bg": "Geen",
+                "main-bg": "Hoofdkleur",
+                "light-bg": "Licht",
+                "dark-bg": "Donker"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_63cbb15c783e3",
+            "label": "Marge onderzijde",
+            "name": "text_margin_bottom",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "rg-margin": "Normaal",
+                "lg-margin": "Groot",
+                "sm-margin": "Klein",
+                "no-margin": "Geen"
+            },
+            "default_value": "rg-margin",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/services"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1674293628
+}

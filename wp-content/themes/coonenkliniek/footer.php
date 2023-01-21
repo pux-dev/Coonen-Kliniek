@@ -1,5 +1,5 @@
  <?php
- $logo			= get_field('logo', 'options');
+ $footer_logo	= get_field('footer_logo', 'options');
  $email			= get_field('email', 'options');
  $phone			= get_field('phone', 'options');
  $adress		= get_field('adress', 'options');
@@ -13,145 +13,134 @@
 		<!--  / footer container \ -->
 		<footer id="footerCntr">
 
- 		<!--  / Top Footer \ -->	
-		<div class="top-footer centered">
+			<!-- /// Top footer \\ -->
+			<div class="top centered grid columns-3">
+
+				<div class="column">
+					<h4 class="title">Botox</h4>
+					<?php
+						wp_nav_menu( [
+							'theme_location' => 'footer_menu_a',							
+						] );
+					?>	
+				</div>
+
+				<div class="column">
+					<h4 class="title">Fillers</h4>
+					<?php
+						wp_nav_menu( [
+							'theme_location' => 'footer_menu_b',							
+						] );
+					?>	
+				</div>
+
+				<div class="column">
+					<h4 class="title">Skinboosters</h4>
+					<?php
+						wp_nav_menu( [
+							'theme_location' => 'footer_menu_v',
+						] );
+					?>	
+
+				<h4 class="title">Coolsculpting</h4>
+
+				</div>
 				
-			<div class="inner flex jucosp">
-				<?php if( $logo ) : ?>
-					<div class="logo">
-						<?php echo wp_get_attachment_image( $logo, 'large', '', array( 'class' => 'style-svg' ) ); ?>
+			</div>
+			<!-- \\ Top footer /// -->
+
+			<!-- /// Bottom Footer \\ -->
+			<div class="bottom centered grid columns-3">
+				
+				<!-- /// Contact widget \\ -->
+				<div class="contact">
+					<h4>Coonen Kliniek</h4>
+					
+					<?php if ($adress) : ?>
+						<p><?php echo $adress; ?></p>
+					<?php endif; ?>
+
+					<?php if( $phone ): 
+					$link_url = $phone['url']; $link_title = $phone['title']; $link_target = $phone['target'] ? $phone['target'] : '_self'; ?>
+						<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">T: <?php echo esc_html( $link_title ); ?></a>
+					<?php endif; ?>
+
+					<?php if( $email ): 
+					$link_url = $email['url']; $link_title = $email['title']; $link_target = $email['target'] ? $email['target'] : '_self'; ?>
+						<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">E: <?php echo esc_html( $link_title ); ?></a>
+					<?php endif; ?>		
+					
+					<!-- /// Certificeringen \\ -->
+					<div class="certificeringen">
+						<?php if( have_rows('footer_certifications', 'options') ): ?>
+							<h4>Aangesloten bij:</h4>
+							<?php // Loop through rows.
+							while( have_rows('footer_certifications', 'options') ) : the_row();
+								// Load sub field value.
+								$cert_logo = get_sub_field('footer_certification');
+								// Do something...
+								if( $cert_logo ) : ?>
+									<?php echo wp_get_attachment_image( $cert_logo, 'footer_cert_lg', '', array( 'class' => 'image' ) ); ?>
+								<?php endif ?>
+							<?php endwhile;
+						endif; ?>
 					</div>
+					<!-- \\ Certificeringen /// -->					
+				
+				</div>
+				<!-- \\ Contact widget /// -->
+
+				<!-- /// Snel Naar \\ -->
+				<div class="column">
+					<h4 class="title">Snel Naar</h4>
+					<?php
+						wp_nav_menu( [
+							'theme_location' => 'footer_menu_d',							
+						] );
+					?>	
+				</div>						
+				<!-- \\ Snel Naar /// -->
+
+				<div class="column">
+
+					<!-- /// Ervaringen widget \\ -->
+					<div class="ervaringen">
+						<h4 class="Ervaringen">Ervaringen</h4>
+						<p>Deze functionaliteit volgt snel</p>
+					</div>
+					<!-- \\ Ervaringen widget /// -->
+
+					<!-- /// Privacy \\ -->
+						<div class="privacy">
+							<h4 class="title">Privacy</h4>
+							<?php
+								wp_nav_menu( [
+									'theme_location' => 'copyright_menu',
+								] );
+							?>	
+							<p class="copy">&copy;<?php echo date('Y');?> <?php echo get_bloginfo('name'); ?></p>
+						</div>
+					<!-- \\ Privacy /// -->
+
+				</div>
+				
+			</div>
+			<!-- \\ Bottom Footer /// -->
+
+			<!-- /// Subfooter \\ -->
+			<div class="subfooter flex jucoce">
+				<?php if( $footer_logo ) : ?>
+					<?php echo wp_get_attachment_image( $footer_logo, 'large', '', array( 'class' => 'image' ) ); ?>
 				<?php endif ?>
+			</div>
+			<!-- \\ Subfooter /// -->
 
-			</div>					
-			
-		</div>
-		<!--  \ Top Footer / -->
 		
-			<!--  / copyright box \ -->
-			<div class="holder centered grid columns-4">
-				
-			<!-- / Company info \ -->
-			<div class="widget">
-				<div class="title"><?php echo get_bloginfo('name'); ?></div>					
-				<?php if ($adress) {
-					echo '<p>' . $adress . '</p>';
-				}
-
-				if( $phone ): 
-				$link_url = $phone['url']; $link_title = $phone['title']; $link_target = $phone['target'] ? $phone['target'] : '_self'; ?>
-					<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-				<?php endif;
-
-				if( $email ): 
-				$link_url = $email['url']; $link_title = $email['title']; $link_target = $email['target'] ? $email['target'] : '_self'; ?>
-					<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-				<?php endif; ?>
-
-				<!-- Social icons -->
-				<?php if( have_rows('socials', 'options') ): ?>
-					<div class="social">
-						<?php // Loop through rows.
-						while( have_rows('socials', 'options') ) : the_row();
-							// Load sub field value.
-							$social_link = get_sub_field('social_link');
-							$social_icon = get_sub_field('social_icon');
-							// Do something...
-							if( $social_link ): 
-							$link_url = $social_link['url']; $link_title = $social_link['title']; ?>
-								<a href="<?php echo esc_url( $link_url ); ?>" target="_blank"><?php echo wp_get_attachment_image( $social_icon, 'large', '', array( 'class' => 'social-icon' ) ); ?></a>
-							<?php endif; ?>
-						<?php endwhile; ?>
-					</div>	
-				<?php endif; ?>
-				<!-- Einde Social icons -->
-			</div>
-			<!-- \ Company info / -->
-
-			<!-- / Footer menu A \ -->
-			<div class="widget">
-				<div class="title">Uw situatie</div>
-				<?php wp_nav_menu( [
-					'theme_location' => 'footer_menu_a',							
-				] ); ?>
-
-				
-			</div>
-			<!-- \ Footer menu A / -->
-
-			<!-- / Footer menu B \ -->
-			<div class="widget">
-				<div class="title">Begrippenlijst</div>
-				<?php
-					// Parameters https://developer.wordpress.org/reference/functions/get_posts/#parameters
-					$query = new WP_Query(array(
-					'posts_per_page'	=> 10,
-					'post_type'			=> 'glossary',
-					'orderby'			=> 'rand',
-					'suppress_filters' => true
-					));
-					if($query->have_posts()): ?>
-						<div class="items">
-							<?php while($query->have_posts()):
-							$query->the_post();
-							$custom_field   = get_field('custom_field');
-							setup_postdata( $post ); ?>
-								<div class="item">
-									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-								</div>
-							<?php endwhile; ?>
-						</div>
-					<?php wp_reset_postdata(); ?>
-					<?php endif;
-				?>
-			</div>
-			<!-- \ Footer menu B / -->
-
-			<!-- / Footer menu C \ -->
-			<div class="widget">
-				<div class="title">Laatste nieuws</div>
-				<?php
-					// Parameters https://developer.wordpress.org/reference/functions/get_posts/#parameters
-					$query = new WP_Query(array(
-					'posts_per_page'	=> 5,
-					'post_type'			=> 'post',					
-					'suppress_filters' => true
-					));
-					if($query->have_posts()): ?>
-						<div class="items">
-							<?php while($query->have_posts()):
-							$query->the_post();
-							$custom_field   = get_field('custom_field');
-							setup_postdata( $post ); ?>
-								<div class="item">
-									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-								</div>
-							<?php endwhile; ?>
-						</div>
-					<?php wp_reset_postdata(); ?>
-					<?php endif;
-				?>				
-			</div>
-				</div>				
-			</div>
-			<!-- \ Footer menu C / -->
-			
 		</footer>
 		<!--  \ footer container / -->
 
-
-		<div class="subfooter flex alitce jucoce">
-		<div class="copyrightBox centered">
-				<ul class="flex">
-					<li class="copy">&copy;<?php echo date('Y');?> <?php echo get_bloginfo('name'); ?></li>
-					<?php
-					wp_nav_menu( [
-						'theme_location' => 'copyright_menu',							
-					] );
-					?>					
-			</div>
-			<!--  \ copyright box / -->
-		</div>
+		
+		
 	</div>
 	<!--  \ main container / -->
 	</div>

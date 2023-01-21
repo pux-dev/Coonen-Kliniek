@@ -60,6 +60,7 @@
 @use 'components/label'; //Label (boven de titels)
 @use 'components/nav-arrow'; //Nav arrow
 @use 'components/icons'; //Iconen (telefoon e.d.)
+@use 'components/read-more'; //Read more link
 
 // Specifiek voor dit thema
 // @use 'layout/page-header'; //Page header
@@ -69,7 +70,6 @@
 // @use 'sections/sidebar-employee'; // Sidebar medewerker single
 // @use 'sections/sidebar-menu'; // Sidebar menu
 // @use 'sections/sidebar-tip'; // Sidebar Medewerker tip
-@use 'components/read-more'; //Read more link
 // @use 'components/whatsapp'; //Whatsapp button
 // @use 'components/usp-list'; //USP list
 // @use 'components/scroll-down'; //Scroll down banner
@@ -78,4 +78,5 @@
 // @use 'components/review-widget'; //Review widget
 // @use 'components/title-stripe'; //Streep onder titels
 // @use 'components/team-item'; //Team loop item
-@use 'components/cookie-banner'; //Cookie Banner
+//@use 'components/cookie-banner'; //Cookie Banner
+@use 'components/behandelingen'; //Behandelingen overzicht

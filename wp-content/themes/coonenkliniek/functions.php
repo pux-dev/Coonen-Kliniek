@@ -11,7 +11,7 @@ $theme->add_namespace( 'Theme', get_template_directory() . '/src/lib' );
 // General
 define( 'THEME_NAME', explode( '/', get_template_directory() )[ count( explode( '/', get_template_directory() ) ) - 1 ] );
 define( 'TEXTDOMAIN', THEME_NAME );
-define( 'THEME_VERSION', '0.13' ); //Versienummer wordt aan css + js files meegegeven
+define( 'THEME_VERSION', '0.1' ); //Versienummer wordt aan css + js files meegegeven
 
 // Options
 define( 'EXCERPT_LENGTH', '20' );
@@ -51,6 +51,7 @@ define( 'TEXTIMAGE_BLOCK', true ); //Tekstblok met afbeelding
 define( 'USP_BLOCK', true ); //Unique Selling Points
 define( 'TEAM', false ); //Teamleden
 define( 'REVIEWS_BLOCK', false ); //Sectie met reviews en Testimonials
+define( 'SERVICES_BLOCK', true ); //Diensten overzicht
 define( 'SLIDER', false ); // Slider
 define( 'STEPS', false ); // Stappen Carrousel
 define( 'FEATURED', false ); // Uitgelichte items
@@ -137,10 +138,10 @@ function banner_filter( $errors, $file, $field ){
 }
 
 
-add_filter('acf/upload_prefilter/name=tm_image', 'avatar_filter', 10, 3);
-function avatar_filter( $errors, $file, $field ){  
-	add_image_size( 'team', 290, 290, true );
-	add_image_size( 'team_lg', 580, 580, true );
+add_filter('acf/upload_prefilter/name=footer_certification', 'certification_filter', 10, 3);
+function certification_filter( $errors, $file, $field ){  
+	add_image_size( 'footer_cert', 200, 400, false );
+	add_image_size( 'footer_cert_lg', 400, 800, false );
 }
 
 
@@ -163,11 +164,11 @@ add_filter( 'big_image_size_threshold', '__return_false' );
 // Menus
 define( 'MENUS', serialize( [
 	'primary-menu' => __t( 'Primary menu' ),
-	'copyright_menu' => __t( 'Copyright - Menu' ),
-	'sidebar_menu' => __t( 'Sidebar - Menu' ),
+	'copyright_menu' => __t( 'Copyright - Menu' ),	
 	'footer_menu_a' => __t( 'Footer menu A' ),
 	'footer_menu_b' => __t( 'Footer menu B' ),
 	'footer_menu_c' => __t( 'Footer menu C' ),
+	'footer_menu_d' => __t( 'Footer menu D' ),
 ] ) );
 
 // Theme init

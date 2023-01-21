@@ -29,12 +29,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "return_format": "id",
-            "preview_size": "medium",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -42,7 +41,33 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": "png, svg"
+            "mime_types": "png, svg",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_63cba3ec3d26c",
+            "label": "Footer logo",
+            "name": "footer_logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Gebruik een SVG (of anders PNG van max 230 pixels breed)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png, svg",
+            "preview_size": "medium"
         },
         {
             "key": "field_63429987ea23d",
@@ -97,8 +122,8 @@
             "new_lines": "br"
         },
         {
-            "key": "field_63ad6daa4a319",
-            "label": "Overzichtspagina's",
+            "key": "field_63cab0bb4610a",
+            "label": "Footer",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -114,11 +139,11 @@
             "endpoint": 0
         },
         {
-            "key": "field_63ad6dd84a31c",
-            "label": "Blog page titel",
-            "name": "blog_page_title",
+            "key": "field_63cab0c34610b",
+            "label": "Certificeringen",
+            "name": "footer_certifications",
             "aria-label": "",
-            "type": "text",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -127,385 +152,41 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_63ad6de74a31d",
-            "label": "Blog pagina omschrijving",
-            "name": "blog_page_desc",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_63ad6db74a31a",
-            "label": "Team pagina titel",
-            "name": "team_page_title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_63ad6dc94a31b",
-            "label": "Team pagina omschrijving",
-            "name": "team_page_desc",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_63b0770dccc1c",
-            "label": "Team pagina front office titel",
-            "name": "team_page_front_title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_63b07712ccc1d",
-            "label": "Team pagina front-office omschrijving",
-            "name": "team_page_front_desc",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_63ad94ab6cfcc",
-            "label": "Vacature pagina titel",
-            "name": "vacature_page_title",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_63ad94986cfcb",
-            "label": "Vacature pagina omschrijving",
-            "name": "vacature_page_desc",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_63aeed5c872d8",
-            "label": "Bijzondere ongevallen CTA",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_63aeed76872d9",
-            "label": "Label",
-            "name": "special_cta_label",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_63aeed85872da",
-            "label": "Titel",
-            "name": "special_cta_title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_63aeed8c872db",
-            "label": "Omschrijving",
-            "name": "special_cta_desc",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 1
-        },
-        {
-            "key": "field_63adad26bb57f",
-            "label": "Vacature CTA",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_63adae3fe4adc",
-            "label": "Label",
-            "name": "vacature_cta_label",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_63adad31bb580",
-            "label": "Titel",
-            "name": "vacature_cta_title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_63adad6dbb581",
-            "label": "Omschrijving",
-            "name": "vacature_cta_desc",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 1
-        },
-        {
-            "key": "field_63adad8cbb582",
-            "label": "Medewerker",
-            "name": "vacature_cta_employee",
-            "aria-label": "",
-            "type": "post_object",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "team"
-            ],
-            "taxonomy": "",
-            "return_format": "object",
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 1
-        },
-        {
-            "key": "field_639092f105276",
-            "label": "Gerelateerde berichten",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_639092ff05277",
-            "label": "Titel",
-            "name": "related_title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6390931105278",
-            "label": "Omschrijving",
-            "name": "related_content",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Nieuwe regel",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_63cab0df4610c",
+                    "label": "Certificering",
+                    "name": "footer_certification",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Upload een nieuwe afbeelding, pak er niet een uit de mediabibliotheek. De nieuwe afbeelding wordt automatisch naar het juiste formaat geconverteerd.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "library": "uploadedTo",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_63cab0c34610b"
+                }
+            ]
         },
         {
             "key": "field_62110c4c43d73",
@@ -667,5 +348,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1672576203
+    "modified": 1674290181
 }

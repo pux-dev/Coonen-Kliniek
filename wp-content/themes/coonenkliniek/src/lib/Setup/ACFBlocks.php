@@ -411,6 +411,30 @@ class ACFBlocks {
                 ));          
             }
 
+            if ( SERVICES_BLOCK == true ) {
+                // Tekstblok met opsomming
+                acf_register_block_type(array(
+                    'name'              => 'services',
+                    'title'             => __('Behandelingen'),
+                    'description'       => __('Overzicht van alle behandelingen'),
+                    'render_template'   => 'template-parts/blocks/services/services.php',
+                    'category'          => 'common',
+                    'icon'              => 'list',
+                    'keywords'          => array( 'behandelingen', 'diensten', 'overzicht'),
+                    'supports' => array( 
+                        'align' =>false  
+                    ),
+                    'example'  => array(
+                        'attributes' => array(
+                            'mode' => 'preview',
+                            'data' => array(
+                                'preview_image_help' => get_stylesheet_directory_uri() . '/template-parts/blocks/services/preview.png',
+                            )
+                        )
+                    )
+                ));
+            }
+
             if ( TEAM == true ) {
                 // TEAM
                 acf_register_block_type(array(
@@ -458,6 +482,7 @@ class ACFBlocks {
                     )
                 ));
             }
+            
 
             if ( CLIENT_CARROUSEL == true ) {
                 // Tekstblok met opsomming
@@ -605,7 +630,8 @@ class ACFBlocks {
             'acf/reviews',
             'acf/carrousel',
             'acf/steps',
-            'acf/client-carrousel',
+            'acf/client-carrousel',            
+            'acf/services',
             'acf/slider',
             'acf/featured',
             'acf/featured-blogs',            
