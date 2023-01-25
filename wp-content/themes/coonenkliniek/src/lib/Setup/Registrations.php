@@ -40,7 +40,6 @@ class Registrations {
 				'menu_position'		 => 45,
 				'supports'           => [
 					'title',
-					'editor',
 				],
 			]
 			);
@@ -71,6 +70,30 @@ class Registrations {
 		);
 		}
 
+		if ( LOGO_SECTION == true ) {
+			register_post_type( 'logos',
+				[
+					'labels'             => [
+						'name'          => __t( 'Logos' ),
+						'singular_name' => __t( 'Logo' ),
+						'menu_name'     => __t( 'Logos' ),
+					],
+					'public'             => true,
+					'publicly_queryable' => true,
+					'menu_icon'          => 'dashicons-groups',
+					'has_archive'        => false,
+					'show_in_menu'       => true,
+					'menu_position'		 => 30,
+					'rewrite'             => [ 'slug' => 'logo' ],
+					'supports'           => [
+						'title'						
+					],				
+				]
+			);
+			}
+
+		if ( VACATURES == true ) {
+
 		register_post_type( 'vacatures',
 			[
 				'labels'             => [
@@ -92,31 +115,9 @@ class Registrations {
 					'excerpt'
 				],				
 			]
-		);
+		);}
 
-		register_post_type( 'client_verhalen',
-			[
-				'labels'             => [
-					'name'          => __t( 'Cliënt verhalen' ),
-					'singular_name' => __t( 'Cliënt verhaal' ),
-					'menu_name'     => __t( 'Cliënt verhalen' ),
-				],
-				'public'             => true,
-				'publicly_queryable' => true,
-				'menu_icon'          => 'dashicons-admin-site-alt3',
-				'has_archive'        => true,
-				'show_in_menu'       => true,
-				'menu_position'		 => 50,
-				'rewrite'             => [ 'slug' => 'client-ervaringen' ],
-				'supports'           => [
-					'title',
-					'editor',
-					'revisions',
-					'thumbnail',
-					'excerpt'
-				],				
-			]
-		);
+		
 		
 	}
 
@@ -132,7 +133,7 @@ class Registrations {
 	 */
 	public function register_taxonomies() {		
 
-		register_taxonomy( 'type', [ 'event_aanvraag' ],
+		/*register_taxonomy( 'type', [ 'event_aanvraag' ],
 			[
 				'hierarchical'      => true,
 				'labels'            => [
@@ -147,7 +148,7 @@ class Registrations {
 				'show_admin_column' => true,
 				'rewrite'           => [ 'slug' => __t( 'op-aanvraag' ) ],
 			]
-		);		
+		);		*/
 	}
 
 	

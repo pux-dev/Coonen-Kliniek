@@ -64,7 +64,7 @@ $background         = get_field('rv_background_color'); ?>
 			<div class="testimonials-carrousel owl-carousel">
 				<?php while($query->have_posts()):
 				    $query->the_post();
-				    setup_postdata( $post );
+				    setup_postdata( $query );
 				    get_template_part( 'template-parts/loop', 'testimonial' ); ?>                
 				<?php endwhile; ?>
 			</div>

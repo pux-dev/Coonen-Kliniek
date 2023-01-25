@@ -19,14 +19,33 @@ jQuery(document).ready(function ($) {
 		}
 	});
 
-	$(".voorhoofdrimpel").hover(
-		function () {
-			$(this).not(this).addClass('hover');
-		},
-		function () {
-			$(this).not(this).removeClass('hover');
+	$('.testimonials-carrousel').owlCarousel({
+		loop: true,
+		nav: false,
+		margin: 10,
+		responsive: {
+			0: {
+				items: 1
+			},
+			600: {
+				items: 1
+			},
+
 		}
-	);
+	})
+	var testimonialCarrousel = $('.testimonials-carrousel');
+	testimonialCarrousel.owlCarousel();
+	// Go to the next item
+	$('.testimonials .next').click(function () {
+		testimonialCarrousel.trigger('next.owl.carousel');
+	})
+	// Go to the previous item
+	$('.testimonials .prev').click(function () {
+		// With optional speed parameter
+		// Parameters has to be in square bracket '[]'
+		testimonialCarrousel.trigger('prev.owl.carousel', [300]);
+	})
+
 
 
 

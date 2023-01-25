@@ -46,6 +46,7 @@ define( 'FEATURED_BLOGS', false ); // Uitgelichte blogs
 define( 'FULLWIDTH_BLOCK', true ); //Tekstblok volledige breedte
 define( 'GALLERY', false ); //Afbeeldingen gallerij
 define( 'LATEST_NEWS', false ); //Laatste nieuwsitems
+define( 'LOGO_SECTION', true ); //Sectie met logo's
 define( 'TEXT_LIST', false ); //
 define( 'TEXTIMAGE_BLOCK', true ); //Tekstblok met afbeelding
 define( 'USP_BLOCK', true ); //Unique Selling Points
@@ -55,11 +56,12 @@ define( 'SERVICES_BLOCK', true ); //Diensten overzicht
 define( 'SLIDER', false ); // Slider
 define( 'STEPS', false ); // Stappen Carrousel
 define( 'FEATURED', false ); // Uitgelichte items
-define( 'TESTIMONIAL_CARROUSEL', false ); //Testimonial Carrousel
+define( 'TESTIMONIAL_CARROUSEL', true ); //Testimonial Carrousel
 
 //Define Custom Post Types
 define( 'CPT_TEAM', false ); //Team 
-define( 'CPT_TESTIMONIALS', false ); //Testimonials
+define( 'CPT_TESTIMONIALS', true ); //Testimonials
+define( 'VACATURES', false ); //Vacatures
 
 /*
 //Widgets

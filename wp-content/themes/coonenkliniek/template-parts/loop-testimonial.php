@@ -8,7 +8,9 @@
  * @version    4.5.1
  */
 
-$score = get_field('score', get_the_ID()); ?>
+$testimonial = get_field('testi_testimonial', get_the_ID()); 
+$score = get_field('testi_score', get_the_ID());
+$title = get_field('testi_title', get_the_ID()); ?>
 
 <!-- Review item -->
 <div class="item">
@@ -24,11 +26,11 @@ $score = get_field('score', get_the_ID()); ?>
     
     <!-- Testimonial inhoud -->
     <div class="testimonial-content">
-        <?php the_content(); ?>
+        <?php echo $testimonial; ?>
 
         <!-- Lees meer -->
         <?php
-        $text_length = strlen(get_the_content());
+        $text_length = strlen($testimonial);
         if ($text_length > 260) : ?>
             <a id="full-review" class="more">
                 <?php _e( 'Meer', 'vandam' ); ?>

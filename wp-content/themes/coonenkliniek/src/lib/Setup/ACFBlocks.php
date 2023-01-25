@@ -532,6 +532,30 @@ class ACFBlocks {
                 ));          
             }
 
+            if ( LOGO_SECTION == true ) {
+                // Tekstblok met opsomming
+                acf_register_block_type(array(
+                    'name'              => 'client-logos',
+                    'title'             => __('Logo sectie'),
+                    'description'       => __('Sectie waar je een of meerdere logos kunt toevogen'),
+                    'render_template'   => 'template-parts/blocks/clients/client-logos.php',
+                    'category'          => 'common',
+                    'icon'              => 'list',
+                    'keywords'          => array( 'logo', 'partner', 'klant', 'client'),
+                    'supports' => array( 
+                        'align' =>false  
+                    ),
+                    'example'  => array(
+                        'attributes' => array(
+                            'mode' => 'preview',
+                            'data' => array(
+                                'preview_image_help' => get_stylesheet_directory_uri() . '/template-parts/blocks/clients/preview.png',
+                            )
+                        )
+                    )
+                ));          
+            }
+
             if ( FAQ == true ) {
                 // FAQ
                 acf_register_block_type(array(
@@ -621,8 +645,9 @@ class ACFBlocks {
             'acf/banner',
             'acf/content',
             'acf/cta',
+            'acf/client-logos',
             'acf/contact',
-            'acf/contact-cta',            
+            'acf/contact-cta',
             'acf/full-width',
             'acf/latest',
             'acf/text-list',
