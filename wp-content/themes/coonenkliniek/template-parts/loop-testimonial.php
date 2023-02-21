@@ -23,6 +23,10 @@ $title = get_field('testi_title', get_the_ID()); ?>
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/star.svg" alt="">
     </div>
     <!--Einde Rating sterren -->
+
+    <!-- Naam -->
+    <p class="name"><?php the_title();?></p>
+    <!-- Einde Naam -->
     
     <!-- Testimonial inhoud -->
     <div class="testimonial-content">
@@ -40,10 +44,7 @@ $title = get_field('testi_title', get_the_ID()); ?>
 
     </div>
     <!-- Einde Testimonial inhoud -->
-
-    <!-- Naam -->
-    <p class="name"><?php the_title();?></p>
-    <!-- Einde Naam -->
+    
     
 </div>
 <!--Einde review item -->

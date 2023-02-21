@@ -22,17 +22,20 @@ $className = 'testimonial-carrousel';
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
 }
-if( !empty($block['align']) ) {
-    $className .= ' align' . $block['align'];
-}
+
 
 $title              = get_field('rv_title');
 $content            = get_field('rv_content');
+$align               = get_field('rv_align');
 $link               = get_field('rv_link');
 $margin             = get_field('rv_margin_bottom');
 $background         = get_field('rv_background_color'); ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> centered  alitce section  <?php if ($margin) { echo $margin; } ?> <?php if ($align) { echo $align; } ?> <?php if ($background && $background != 'no-bg') { echo 'has-bg' . ' ' .  $background; } ?>">
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> centered alitce section has-bg <?php if ($margin) { echo $margin; } ?> <?php if ($align) { echo $align; } ?> <?php if ($background && $background != 'no-bg') { echo 'has-bg' . ' ' .  $background; } ?>">
+
+<div class="bg-image">
+    <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/review-bg.jpg" alt="">
+</div>
 
     <!-- Content -->
     <div class="content">        
@@ -49,9 +52,11 @@ $background         = get_field('rv_background_color'); ?>
     <!-- Einde Content -->        
 
     <!-- Testimonial Carrousel -->
-    <div class="testimonials ">
-                
-		<?php
+    <div class="testimonials centered">
+
+    <div class="inner">
+        
+        <?php
 		// Parameters https://developer.wordpress.org/reference/functions/get_posts/#parameters
 		$query = new WP_Query(array(
 		'posts_per_page'	=> -1,
@@ -82,6 +87,9 @@ $background         = get_field('rv_background_color'); ?>
             $link_url = $link['url']; $link_title = $link['title']; $link_target = $link['target'] ? $link['target'] : '_self'; ?>
             <a class="read-more" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
         <?php endif; ?>
+        
+        </div>
+		
 
     </div>
 

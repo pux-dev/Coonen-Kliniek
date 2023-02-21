@@ -23,6 +23,7 @@ jQuery(document).ready(function ($) {
 		loop: true,
 		nav: false,
 		margin: 10,
+		items: 1,
 		responsive: {
 			0: {
 				items: 1
