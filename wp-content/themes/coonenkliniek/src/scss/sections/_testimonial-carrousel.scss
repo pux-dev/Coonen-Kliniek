@@ -1,8 +1,13 @@
 @use '../abstracts' as *;
 
 .testimonial-carrousel {
+    display: flex;
+    justify-content: flex-end;
     margin-bottom: calc($section_margin + 20px);
     min-height: 588px;
+    background-image: url('../images/review-bg.jpg');
+    background-position: center;
+    background-size: cover;
 
     .content {
         p {
@@ -12,11 +17,28 @@
 
     .testimonials {
         position: relative;
+        background-color: $color_theme_gold_dark;
+        min-height: 500px;
+        max-width: 442px;
+        padding: 45px 60px 80px;
+        border-radius: 17px 0 17px;
+        box-shadow: 0px 3px 6px #00000029;
 
         .read-more {
             position: absolute;
-            right: 20px;
-            bottom: -20px;
+            bottom: -40px;
+            color: #fff;
+
+            &::after {
+                filter: brightness(1.4);
+            }
+        }
+
+        .more {
+            position: absolute;
+            bottom: 9px;
+            text-decoration: underline;
+            cursor: pointer;
         }
     }
 
@@ -31,22 +53,19 @@
 
     .inner {
         max-width: 440px;
-        float: right;
         position: relative;
     }
 
     .item {
-        background-color: $color_theme_gold;
-        min-height: 500px;
-        padding: 45px 60px;
-        border-radius: 17px 0 17px;
-        box-shadow: 0px 3px 6px #00000029;
-
         .name {
             color: #fff;
             font-family: $font_family_heading;
             font-weight: bold;
             margin-bottom: 0;
+        }
+
+        a {
+            color: #fff;
         }
 
         .stars {
@@ -60,25 +79,45 @@
         }
 
         .testimonial-content {
-            max-height: 500px;
             color: #fff;
             overflow: hidden;
             position: relative;
             transition: $transition;
 
-            &::after {
-                content: '';
-                height: 40px;
-                width: 100%;
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                background: rgb(255, 255, 255);
-                background: linear-gradient(
-                    180deg,
-                    rgba(255, 255, 255, 0) 0%,
-                    rgba(255, 255, 255, 1) 100%
-                );
+            p {
+                max-height: 315px;
+                color: #fff;
+                position: relative;
+            }
+
+            &.enlarge {
+                p {
+                    max-height: initial;
+                }
+
+                .more {
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            }
+        }
+
+        &.long-text {
+            p {
+                &::after {
+                    content: '';
+                    height: 47px;
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    bottom: -7px;
+                    background: rgb(255, 255, 255);
+                    background: linear-gradient(
+                        180deg,
+                        rgb(144 128 85 / 0%) 0%,
+                        rgb(144 128 85) 100%
+                    );
+                }
             }
         }
     }
@@ -105,6 +144,10 @@
         top: calc(50% - 25px);
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .owl-dots {
+        display: none;
     }
 
     @media only screen and (max-width: 767px) {

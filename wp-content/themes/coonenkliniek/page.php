@@ -20,6 +20,13 @@ if ($has_banner) {
     }
 } ?>
 
+<?php //Breadcrumbs
+if (!is_front_page()) {
+    if ( function_exists('yoast_breadcrumb') ) {
+        yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+      }
+} ?>
+
 <!--  / content area \ -->
 <div class="content-area">
     <?php the_content(); ?>

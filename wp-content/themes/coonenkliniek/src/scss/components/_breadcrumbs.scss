@@ -1,0 +1,25 @@
+@use '../abstracts' as *;
+
+#breadcrumbs {
+    padding-left: 55px;
+    padding-right: 60px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+
+    a {
+        color: $color_text_body;
+
+        &:hover {
+            color: $color_theme_gold;
+        }
+    }
+
+    .breadcrumb_last {
+        color: $color_theme_gold;
+    }
+
+    span span {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}

@@ -169,72 +169,16 @@
             "placeholder": ""
         },
         {
-            "key": "field_63b2cc569bd00",
-            "label": "Toon streep?",
-            "name": "show_stripe",
+            "key": "field_63f620f98df1f",
+            "label": "Gebruik kleine titel",
+            "name": "faq_sm_title",
             "aria-label": "",
             "type": "true_false",
-            "instructions": "Vink aan indien je een huisstijl streep aan de boven- en\/of onderzijde van de sectie wilt tonen",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_63b2ccbb9bd01",
-            "label": "Streep bovenzijde",
-            "name": "faq_stripe_top",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_63b2cc569bd00",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_63b2ccd69bd02",
-            "label": "Streep onderzijde",
-            "name": "faq_stripe_bottom",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_63b2cc569bd00",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "33",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -318,5 +262,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1672662271
+    "modified": 1677074733
 }

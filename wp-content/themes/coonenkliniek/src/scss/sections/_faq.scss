@@ -13,8 +13,6 @@
             cursor: pointer;
             transition: 0.2s ease-in-out;
             text-align: left;
-            background-color: #fff;
-            border-bottom: 1px solid #e9eff1;
             margin-bottom: 0;
 
             &.active {
@@ -25,8 +23,9 @@
             }
 
             .question {
-                font-weight: bold;
-                padding: 25px 65px 25px 25px;
+                font-size: 17px;
+                color: $color_text_body;
+                padding: 25px 0 15px 35px;
                 margin-bottom: 0;
                 transition: $transition;
 
@@ -35,38 +34,23 @@
                 }
             }
 
+            &:first-child {
+                .question {
+                    margin-top: -25px;
+                }
+            }
+
             .answer {
                 display: none;
-                padding: 15px 25px;
-                max-width: 1034px;
                 position: relative;
-
-                .inner {
-                    padding: 20px;
-                    background-color: #f0f0f0;
-                }
-
-                p {
-                    &:before {
-                        content: '';
-                        width: 20px;
-                        height: 20px;
-                        background-color: #f0f0f0;
-                        transform: rotate(45deg);
-                        top: 10px;
-                        left: 50px;
-                        position: absolute;
-                    }
-                }
             }
 
             .open-icon {
                 position: absolute;
                 top: 20px;
-                right: 34px;
+                left: 0;
                 width: 30px;
                 height: 30px;
-                border: 2px solid $color_theme_gold;
                 border-radius: 100%;
 
                 &:before,

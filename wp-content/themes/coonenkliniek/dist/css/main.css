@@ -426,6 +426,10 @@ section .content {
   margin-bottom: 40px;
 }
 
+.banner-padding {
+  padding-top: 30px;
+}
+
 h1,
 h2,
 h3,
@@ -1059,8 +1063,6 @@ footer .subfooter img {
   cursor: pointer;
   transition: 0.2s ease-in-out;
   text-align: left;
-  background-color: #fff;
-  border-bottom: 1px solid #e9eff1;
   margin-bottom: 0;
 }
 .faq ul li.active .open-icon:after {
@@ -1068,41 +1070,28 @@ footer .subfooter img {
   visibility: hidden;
 }
 .faq ul li .question {
-  font-weight: bold;
-  padding: 25px 65px 25px 25px;
+  font-size: 17px;
+  color: #000;
+  padding: 25px 0 15px 35px;
   margin-bottom: 0;
   transition: all 0.2s ease-in-out;
 }
 .faq ul li .question:hover {
   color: #ad9f79;
 }
+.faq ul li:first-child .question {
+  margin-top: -25px;
+}
 .faq ul li .answer {
   display: none;
-  padding: 15px 25px;
-  max-width: 1034px;
   position: relative;
-}
-.faq ul li .answer .inner {
-  padding: 20px;
-  background-color: #f0f0f0;
-}
-.faq ul li .answer p:before {
-  content: "";
-  width: 20px;
-  height: 20px;
-  background-color: #f0f0f0;
-  transform: rotate(45deg);
-  top: 10px;
-  left: 50px;
-  position: absolute;
 }
 .faq ul li .open-icon {
   position: absolute;
   top: 20px;
-  right: 34px;
+  left: 0;
   width: 30px;
   height: 30px;
-  border: 2px solid #ad9f79;
   border-radius: 100%;
 }
 .faq ul li .open-icon:before, .faq ul li .open-icon:after {
@@ -1249,19 +1238,39 @@ footer .subfooter img {
 }
 
 .testimonial-carrousel {
+  display: flex;
+  justify-content: flex-end;
   margin-bottom: 100px;
   min-height: 588px;
+  background-image: url("../images/review-bg.jpg");
+  background-position: center;
+  background-size: cover;
 }
 .testimonial-carrousel .content p {
   max-width: 920px;
 }
 .testimonial-carrousel .testimonials {
   position: relative;
+  background-color: #908055;
+  min-height: 500px;
+  max-width: 442px;
+  padding: 45px 60px 80px;
+  border-radius: 17px 0 17px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
 }
 .testimonial-carrousel .testimonials .read-more {
   position: absolute;
-  right: 20px;
-  bottom: -20px;
+  bottom: -40px;
+  color: #fff;
+}
+.testimonial-carrousel .testimonials .read-more::after {
+  filter: brightness(1.4);
+}
+.testimonial-carrousel .testimonials .more {
+  position: absolute;
+  bottom: 9px;
+  text-decoration: underline;
+  cursor: pointer;
 }
 .testimonial-carrousel .bg-image {
   position: absolute;
@@ -1272,21 +1281,16 @@ footer .subfooter img {
 }
 .testimonial-carrousel .inner {
   max-width: 440px;
-  float: right;
   position: relative;
-}
-.testimonial-carrousel .item {
-  background-color: #ad9f79;
-  min-height: 500px;
-  padding: 45px 60px;
-  border-radius: 17px 0 17px;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
 }
 .testimonial-carrousel .item .name {
   color: #fff;
   font-family: "Mont";
   font-weight: bold;
   margin-bottom: 0;
+}
+.testimonial-carrousel .item a {
+  color: #fff;
 }
 .testimonial-carrousel .item .stars {
   column-gap: 13.5px;
@@ -1297,21 +1301,32 @@ footer .subfooter img {
   height: 20px;
 }
 .testimonial-carrousel .item .testimonial-content {
-  max-height: 500px;
   color: #fff;
   overflow: hidden;
   position: relative;
   transition: all 0.2s ease-in-out;
 }
-.testimonial-carrousel .item .testimonial-content::after {
+.testimonial-carrousel .item .testimonial-content p {
+  max-height: 315px;
+  color: #fff;
+  position: relative;
+}
+.testimonial-carrousel .item .testimonial-content.enlarge p {
+  max-height: initial;
+}
+.testimonial-carrousel .item .testimonial-content.enlarge .more {
+  visibility: hidden;
+  opacity: 0;
+}
+.testimonial-carrousel .item.long-text p::after {
   content: "";
-  height: 40px;
+  height: 47px;
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -7px;
   background: rgb(255, 255, 255);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
+  background: linear-gradient(180deg, rgba(144, 128, 85, 0) 0%, rgb(144, 128, 85) 100%);
 }
 .testimonial-carrousel.main-bg .item {
   background-color: #f0f0f0;
@@ -1325,6 +1340,9 @@ footer .subfooter img {
   top: calc(50% - 25px);
   margin-left: auto;
   margin-right: auto;
+}
+.testimonial-carrousel .owl-dots {
+  display: none;
 }
 @media only screen and (max-width: 767px) {
   .testimonial-carrousel {
@@ -1531,6 +1549,26 @@ footer .subfooter img {
   background-color: #000;
 }
 
+#breadcrumbs {
+  padding-left: 55px;
+  padding-right: 60px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+#breadcrumbs a {
+  color: #000;
+}
+#breadcrumbs a:hover {
+  color: #ad9f79;
+}
+#breadcrumbs .breadcrumb_last {
+  color: #ad9f79;
+}
+#breadcrumbs span span {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 form input,
 form textarea,
 form select {
@@ -1667,27 +1705,25 @@ form.wpcf7-form .wpcf7-acceptance span {
 }
 
 .nav .nav-arrow {
-  width: 56px;
-  height: 56px;
-  border: 2px solid #efece4;
-  box-shadow: 0px 3px 6px rgba(0, 11, 40, 0.1607843137);
-  border-radius: 100%;
+  width: 8.3px;
+  height: 14.4px;
   position: absolute;
   top: calc(50% - 28px);
   z-index: 8;
 }
 .nav .nav-arrow.prev {
-  left: 0;
+  left: -40px;
   transform: rotate(180deg);
 }
 .nav .nav-arrow.next {
-  right: 0;
+  right: 80px;
 }
 .nav .nav-arrow::after {
   content: "";
-  width: 21px;
-  height: 12px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20.49' height='12.065' viewBox='0 0 20.49 12.065'%3E%3Cpath d='M20.255,374.938h0l-4.183-5.06a.706.706,0,0,0-1.132,0,1.128,1.128,0,0,0,0,1.376l2.807,3.4H.8a.991.991,0,0,0,0,1.945H17.75L14.943,380a1.126,1.126,0,0,0,0,1.376.7.7,0,0,0,1.131,0l4.183-5.06h0A1.128,1.128,0,0,0,20.255,374.938Z' transform='translate(0 -369.594)' fill='%2398629D'/%3E%3C/svg%3E");
+  width: 8.3px;
+  height: 14.4px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='8.255' height='14.361' viewBox='0 0 8.255 14.361'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath d='M0,0H8.255V-14.361H0Z' fill='none'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg transform='translate(0 14.361)' clip-path='url(%23a)'%3E%3Cg transform='translate(0.76 -0.76)'%3E%3Cpath d='M0,.76A.758.758,0,0,1-.537.537a.76.76,0,0,1,0-1.075L5.346-6.421-.537-12.3a.76.76,0,0,1,0-1.075.76.76,0,0,1,1.075,0L7.5-6.421.537.537A.758.758,0,0,1,0,.76Z' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
   position: absolute;
   top: calc(50% - 6px);
   left: calc(50% - 10.5px);
@@ -1695,7 +1731,6 @@ form.wpcf7-form .wpcf7-acceptance span {
 }
 .nav .nav-arrow:hover {
   cursor: pointer;
-  background-color: #efece4;
 }
 .nav .nav-arrow:hover::after {
   filter: brightness(3);

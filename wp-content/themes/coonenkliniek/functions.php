@@ -41,7 +41,7 @@ define( 'CONTACT', false ); // Contactformulier met contact opties
 define( 'CONTACT_CTA', false ); // Contactformulier met medewerker gegevens
 define( 'CLIENT_CARROUSEL', false ); //Carrousel met logo's
 define( 'CTA_BLOCK', true ); //Call to Action
-define( 'FAQ', false ); // Veelgestelde vragen
+define( 'FAQ', true ); // Veelgestelde vragen
 define( 'FEATURED_BLOGS', false ); // Uitgelichte blogs
 define( 'FULLWIDTH_BLOCK', true ); //Tekstblok volledige breedte
 define( 'GALLERY', false ); //Afbeeldingen gallerij

@@ -23,7 +23,6 @@ if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
 }
 
-
 $title              = get_field('rv_title');
 $content            = get_field('rv_content');
 $align               = get_field('rv_align');
@@ -32,24 +31,6 @@ $margin             = get_field('rv_margin_bottom');
 $background         = get_field('rv_background_color'); ?>
 
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> centered alitce section has-bg <?php if ($margin) { echo $margin; } ?> <?php if ($align) { echo $align; } ?> <?php if ($background && $background != 'no-bg') { echo 'has-bg' . ' ' .  $background; } ?>">
-
-<div class="bg-image">
-    <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/review-bg.jpg" alt="">
-</div>
-
-    <!-- Content -->
-    <div class="content">        
-        
-        <?php if( $title ) : ?>
-            <h2><?php echo $title; ?></h2>
-        <?php endif; ?>
-
-        <?php if( $content ) : ?>
-            <?php echo $content; ?>
-        <?php endif; ?>
-        
-    </div>
-    <!-- Einde Content -->        
 
     <!-- Testimonial Carrousel -->
     <div class="testimonials centered">
@@ -76,18 +57,19 @@ $background         = get_field('rv_background_color'); ?>
 
 			<?php wp_reset_postdata(); ?>
 
-		<?php endif; ?>
+		<?php endif; ?>      
         
-        <div class="nav">
-            <a class="nav-arrow prev"></a>
-            <a class="nav-arrow next"></a>            
-        </div>
 
         <?php if( $link ): 
             $link_url = $link['url']; $link_title = $link['title']; $link_target = $link['target'] ? $link['target'] : '_self'; ?>
             <a class="read-more" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
         <?php endif; ?>
         
+        </div>
+
+        <div class="nav">
+            <a class="nav-arrow prev"></a>
+            <a class="nav-arrow next"></a>            
         </div>
 		
 
