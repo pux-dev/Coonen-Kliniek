@@ -93,6 +93,26 @@
             "endpoint": 0
         },
         {
+            "key": "field_63f8c14d6d9ff",
+            "label": "Variant met lijntekening?",
+            "name": "cta_line_drawing",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Gebruik de variant met lijntekening van de dame",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_62b2bb4185d42",
             "label": "Achtergrondkleur",
             "name": "cta_background_color",
@@ -167,5 +187,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674129152
+    "modified": 1677246864
 }

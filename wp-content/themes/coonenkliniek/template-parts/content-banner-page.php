@@ -1,58 +1,40 @@
 <?php
-$title       = get_field('banner_title');
-$content     = get_field('banner_content');
-$link        = get_field('banner_link');
-$image       = get_field('banner_image'); 
-$subnav      = get_field('has_subnav'); 
-$banner_usp  = get_field('banner_usp'); ?>
+$image       = get_field('banner_image');
+$price       = get_field('behandel_price'); ?>
 
-<!--  / page banner \ -->
-<section class="page-banner text-image centered alitce section stripe bottom gradient <?php if ($margin) { echo $margin; } ?> <?php if ($align) { echo $align; } ?> <?php if ($background && $background != 'no-bg') { echo 'has-bg' . ' ' .  $background; } ?> <?php if ($subnav) { echo "has-subnav"; } ?>">
-       
-        <!--  Content -->
-        <div class="content logo-backdrop">
+<!--  / banner \ -->
+<div class="page-banner no-margin banner section">
 
-            <?php if( $label ) : ?>
-                <p class="label"><?php echo $label; ?></p>
-            <?php endif; ?>
+    <!--  / Image section \ -->
+    <div class="banner-image">
+        <?php if( $image ) : ?>
+            <?php echo wp_get_attachment_image( $image, 'banner_lg', '', array( 'class' => 'image' ) ); ?>
+        <?php endif ?>
+        <?php get_template_part( 'template-parts/content', 'review-widget' ); ?>
+    </div>
+    <!--  / end Image section \ -->
         
-            <?php if( $title ) : ?>
-                <h2><?php echo $title; ?></h2>
-           <?php endif; ?>               
+    <!--  / content \ -->
+    <div class="content flex jucoce">
+        <div class="content-holder">
 
-           <?php if( $content ) : ?>
-               <?php echo $content; ?>
-           <?php endif; ?>
+            <p class="parent"><?php $terms = get_the_terms($post->ID, 'type');foreach($terms as $term){echo $term->name;} ?></p>
 
-           <?php if ($banner_usp) {
-                get_template_part( 'template-parts/component', 'usp-list' );
-            } ?>          
+            <h1 class="page-title"><?php the_title(); ?></h1>
 
-           <?php if( $link ): 
-               $link_url = $link['url']; $link_title = $link['title']; $link_target = $link['target'] ? \ link['target'] : '_self'; ?>
-               <a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-           <?php endif; ?>           
-           
-       </div>
-       <!--  Einde Content -->
+            <p class="price">
+                <span>Vanaf</span>                
+                €<?php echo $price; ?>,-
+            </p>
 
-       <!-- Afbeelding -->
-       <div class="image">
-            <?php if( $image) : ?>
-                <?php echo wp_get_attachment_image( $image, 'banner_lg', '', array( 'class' => 'image' ) ); ?>
-           <?php endif ?>
-       </div>
-       <!-- Einde afbeelding -->
+            <a class="button" href="#/">Plan een intake</a>
+        
+        </div>
+        
+    </div>
+    <!--  / end content \ -->
 
-        <!-- Scroll down arrow -->
-        <a href="#scroll" class="scroll-down read-more">Lees verder</a>
-        <!-- END Scroll down arrow -->
+   
+</div>
+<!--  / end banner \ -->
 
-</section>
-<!--  / end page banner \ -->
-
-<?php
-    if ($subnav) {
-        get_template_part( 'template-parts/nav', 'subnav' ); 
-    }
-?>

@@ -26,7 +26,7 @@
 @use 'pages/blog'; //Blog overview
 
 // Sections
-//@use 'sections/banner-page'; // page Banner
+@use 'sections/banner-page'; // page Banner
 @use 'sections/banner'; // front page Banner
 @use 'sections/blocks'; // Blokken
 @use 'sections/contact'; // Contactformulier sectie
@@ -40,6 +40,7 @@
 //@use 'sections/gallery'; // Gallery
 //@use 'sections/latest'; // Latest
 @use 'sections/logos'; // Logo sectie
+@use 'sections/pricing'; // Pricing section
 //@use 'sections/related'; // Gerelateerde berichten
 @use 'sections/reviews'; // Reviews
 //@use 'sections/slider'; // Slider
@@ -68,7 +69,7 @@
 // @use 'layout/page-header'; //Page header
 // @use 'layout/sidebar'; //Sidebar
 // @use 'pages/content-page'; //Content pagina
-// @use 'pages/glossary'; //Single Glossary
+@use 'pages/single-behandelingen'; //Single behandelingen
 // @use 'sections/sidebar-employee'; // Sidebar medewerker single
 // @use 'sections/sidebar-menu'; // Sidebar menu
 // @use 'sections/sidebar-tip'; // Sidebar Medewerker tip

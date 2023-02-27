@@ -23,6 +23,26 @@ class Registrations {
 	
 	public function register_custom_post_types() {
 
+		register_post_type( 'behandelingen',
+			[
+				'labels'             => [
+					'name'          => __t( 'Behandelingen' ),
+					'singular_name' => __t( 'Behandeling' ),
+					'menu_name'     => __t( 'Behandelingen' ),
+				],
+				'public'             => true,
+				'publicly_queryable' => true,
+				'menu_icon'          => 'dashicons-clipboard',
+				'has_archive'        => false,
+				'show_in_menu'       => true,
+				'menu_position'		 => 10,
+				'supports'           => [
+					'title',
+					'revisions',
+				],
+			]
+			);
+
 		if ( CPT_TESTIMONIALS == true ) {
 			register_post_type( 'testimonials',
 			[
@@ -133,7 +153,7 @@ class Registrations {
 	 */
 	public function register_taxonomies() {		
 
-		/*register_taxonomy( 'type', [ 'event_aanvraag' ],
+		register_taxonomy( 'type', [ 'behandelingen' ],
 			[
 				'hierarchical'      => true,
 				'labels'            => [
@@ -146,9 +166,9 @@ class Registrations {
 				],
 				'show_ui'           => true,
 				'show_admin_column' => true,
-				'rewrite'           => [ 'slug' => __t( 'op-aanvraag' ) ],
+				'rewrite'           => [ 'slug' => __t( 'behandeltype' ) ],
 			]
-		);		*/
+		);		
 	}
 
 	

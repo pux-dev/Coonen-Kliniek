@@ -556,6 +556,30 @@ class ACFBlocks {
                 ));          
             }
 
+            if ( PRICING == true ) {
+                // LATEST_NEWS
+                acf_register_block_type(array(
+                    'name'              => 'pricing',
+                    'title'             => __('Prijzen'),
+                    'description'       => __('Prijzen van de behandelingen'),
+                    'render_template'   => 'template-parts/blocks/pricing/pricing.php',
+                    'category'          => 'common',
+                    'icon'              => 'list-view',
+                    'keywords'          => array( 'prijzen', 'tarieven', 'kosten'),
+                    'supports' => array( 
+                        'align' =>false  
+                    ),
+                    'example'  => array(
+                        'attributes' => array(
+                            'mode' => 'preview',
+                            'data' => array(
+                                'preview_image_help' => get_stylesheet_directory_uri() . '/template-parts/blocks/pricing/preview.png',
+                            )
+                        )
+                    )
+                ));          
+            }
+
             if ( FAQ == true ) {
                 // FAQ
                 acf_register_block_type(array(
@@ -643,6 +667,7 @@ class ACFBlocks {
     
         return array(
             'acf/banner',
+            'acf/blocks',
             'acf/content',
             'acf/cta',
             'acf/client-logos',
@@ -664,7 +689,7 @@ class ACFBlocks {
             'acf/gallery',
             'acf/team',
             'acf/testimonial-carrousel',
-            'acf/blocks',
+            'acf/pricing',
             //'core/image',
             //'core/paragraph',            
             //'core/list',

@@ -1,0 +1,60 @@
+@use '../abstracts' as *;
+
+.single-behandelingen {
+    .intro {
+        h2 {
+            font-size: $font_size_heading_h2_small;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+        .payoff {
+            font-size: $font_size_heading;
+            color: $color_theme_gold_dark;
+            text-transform: uppercase;
+        }
+    }
+
+    .uitvouw.faq {
+        ul {
+            li {
+                h2.question {
+                    font-size: 20px;
+                    color: $color_theme_gold_dark;
+                    padding-left: 0;
+                }
+
+                &:nth-child(1) {
+                    .answer {
+                        display: block;
+                    }
+                }
+
+                &:nth-child(3n + 1) {
+                    background-color: $color_theme_gold_dark;
+
+                    h2,
+                    p {
+                        color: #fff;
+                    }
+                }
+
+                &:nth-child(3n + 2) {
+                    background-color: $color_theme_gold_light;
+
+                    h2.question {
+                        color: $color_theme_gold_dark;
+                    }
+                }
+
+                &:nth-child(3n + 0) {
+                    background-color: #fff;
+                }
+
+                .inner {
+                    padding-bottom: 20px;
+                    margin-top: -20px;
+                }
+            }
+        }
+    }
+}

@@ -1,28 +1,30 @@
 @use '../abstracts' as *;
 
 .cta {
-    gap: 150px;
-    overflow: hidden;
-
-    h2,
-    p,
-    body {
-        text-transform: none;
-    }
-
     .button {
         margin-top: 0;
         margin-bottom: 20px;
     }
 
-    .left {
-        position: relative;
-        margin-top: -60px;
-        margin-bottom: -65px;
-        height: calc(100% + 125px);
+    &.line-drawing {
+        gap: 150px;
+        overflow: hidden;
 
-        img {
-            min-height: 100%;
+        h2,
+        p,
+        body {
+            text-transform: none;
+        }
+
+        .left {
+            position: relative;
+            margin-top: -60px;
+            margin-bottom: -65px;
+            height: calc(100% + 125px);
+
+            img {
+                min-height: 100%;
+            }
         }
     }
 }

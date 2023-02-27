@@ -4,7 +4,11 @@
  * The Header for our theme.
  * Displays all of the <head> section*/
 $change_bg 	= get_field('change_bg');
-$page_bg 	= get_field('page_bg'); ?>
+$page_bg 	= get_field('page_bg');
+
+$title          = get_field('cta_title');
+
+?>
 
 <!DOCTYPE html>
 <html <?php language_attributes() ?>>

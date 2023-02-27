@@ -21,7 +21,7 @@ if( !empty($block['className']) ) {
 if( !empty($block['align']) ) {
     $className .= ' align' . $block['align'];
 }
-$label          = get_field('cta_label');
+$label = get_field('cta_label');
 $title          = get_field('cta_title');
 $content        = get_field('cta_content');
 $link       	= get_field('cta_link');
@@ -31,16 +31,25 @@ if( $link ) {
     $link_target = $link['target'] ? $link['target'] : '_self';
 }
 $image       	= get_field('cta_icon');
+$line_drawing  	= get_field('cta_line_drawing');
 $margin         = get_field('cta_margin_bottom');
-$background     = get_field('cta_background_color'); ?>
+$background     = get_field('cta_background_color'); 
+
+
+
+?>
+
+
 
 
 <!-- /// Call to Action \\ -->
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> centered section has-bg grid columns-2 alitce <?php if ($margin) { echo $margin; } ?> <?php if ($background) { echo 'has-bg' . ' ' .  $background; } ?>">
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> centered section alitce <?php if ($margin) { echo $margin; } ?> <?php if ($background) { echo 'has-bg' . ' ' .  $background; } ?> <?php if ($line_drawing) { echo 'line-drawing grid columns-2 has-bg'; } ?>">
 
-	<div class="left">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/line-woman.svg" alt="coonen-icon">
-	</div>
+	<?php if ($line_drawing) : ?>
+		<div class="left">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/line-woman.svg" alt="coonen-icon">
+		</div>
+	<?php endif; ?>
 
 	<div class="right">
 		<div class="content">

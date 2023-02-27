@@ -102,4 +102,4 @@ $has_banner = get_field('has_banner'); ?>
 		<!--  \ header container / -->
 
 		<!--  / content container \ -->
-		<main id="contentCntr" <?php if (!$has_banner) { echo 'class="banner-padding"'; } ?>>
+		<main id="contentCntr" <?php if (!$has_banner && !is_singular( 'behandelingen' )) { echo 'class="banner-padding"'; } ?>>

@@ -57,7 +57,7 @@ jQuery(document).ready(function ($) {
 	});
 
 	// FAQ 
-	$('.faq li > h4').click(function (e) {
+	$('.faq li > .question').click(function (e) {
 		e.preventDefault();
 		// hide all span
 		var $this = $(this).next('article');

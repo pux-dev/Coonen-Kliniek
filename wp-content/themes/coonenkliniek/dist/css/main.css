@@ -196,8 +196,9 @@ h1.page-title {
   font-weight: 600;
 }
 
+.title-sm,
 .content-page h2 {
-  font-size: 26px;
+  font-size: 20px;
 }
 
 h3 {
@@ -789,7 +790,7 @@ footer .subfooter img {
   max-width: 700px;
 }
 .single .content-area h2 {
-  font-size: 26px;
+  font-size: 20px;
 }
 .single .content-area h2,
 .single .content-area h3,
@@ -838,6 +839,48 @@ footer .subfooter img {
 }
 .blog-overview.team-page .inner {
   height: 100%;
+}
+
+/* ### Behandelpagina banner  ### */
+.single-behandelingen .banner .content {
+  position: absolute;
+  bottom: -40px;
+  right: calc(50% - 450px);
+}
+.single-behandelingen .banner .content .content-holder {
+  width: 450px;
+  padding: 55px 65px;
+  background-color: #908055;
+  border-radius: 17px 0 17px;
+  text-transform: uppercase;
+}
+.single-behandelingen .banner .content .content-holder .parent {
+  font-weight: 600;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.single-behandelingen .banner .content .content-holder .parent::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+.single-behandelingen .banner .content .content-holder .page-title {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.single-behandelingen .banner .content .content-holder .price {
+  font-size: 19px;
+  color: #fff;
+}
+.single-behandelingen .banner .content .content-holder .button {
+  margin-top: 22px;
+  background-color: #000;
 }
 
 .banner {
@@ -1028,26 +1071,26 @@ footer .subfooter img {
   }
 }
 
-.cta {
-  gap: 150px;
-  overflow: hidden;
-}
-.cta h2,
-.cta p,
-.cta body {
-  text-transform: none;
-}
 .cta .button {
   margin-top: 0;
   margin-bottom: 20px;
 }
-.cta .left {
+.cta.line-drawing {
+  gap: 150px;
+  overflow: hidden;
+}
+.cta.line-drawing h2,
+.cta.line-drawing p,
+.cta.line-drawing body {
+  text-transform: none;
+}
+.cta.line-drawing .left {
   position: relative;
   margin-top: -60px;
   margin-bottom: -65px;
   height: calc(100% + 125px);
 }
-.cta .left img {
+.cta.line-drawing .left img {
   min-height: 100%;
 }
 
@@ -1129,6 +1172,31 @@ footer .subfooter img {
   object-fit: scale-down;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* ### Pricing ### */
+.pricing .pricing-section {
+  column-gap: 40px;
+}
+.pricing .pricing-section .item {
+  background-color: #ad9f79;
+  padding: 25px;
+}
+.pricing .pricing-section .item h4 {
+  color: #000;
+  margin-bottom: 5px;
+}
+.pricing .pricing-section .item .price {
+  color: #fff;
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.pricing .pricing-section .item ul {
+  margin-left: 25px;
+}
+.pricing .pricing-section .item ul li {
+  margin-bottom: 6px;
 }
 
 .reviews {
@@ -1822,6 +1890,45 @@ a.mail::before {
 }
 .alt-layout.frame-dark-bg .read-more::after, .alt-layout.frame-light-bg .read-more::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.631' height='8.888' viewBox='0 0 12.631 8.888'%3E%3Cg transform='translate(53.696 -133)'%3E%3Cg transform='translate(0 131)'%3E%3Cpath d='M18.364,135.937h0l-3.756-3.727a.718.718,0,0,0-1.014,1.016l2.522,2.5-9.452-.209a.717.717,0,1,0,0,1.434l9.452.209-2.522,2.5a.718.718,0,0,0,1.014,1.016l3.756-3.727h0A.716.716,0,0,0,18.364,135.937Z' transform='translate(-59.639 -130)' fill='%23a49974'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.single-behandelingen .intro h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.single-behandelingen .intro .payoff {
+  font-size: 30px;
+  color: #908055;
+  text-transform: uppercase;
+}
+.single-behandelingen .uitvouw.faq ul li h2.question {
+  font-size: 20px;
+  color: #908055;
+  padding-left: 0;
+}
+.single-behandelingen .uitvouw.faq ul li:nth-child(1) .answer {
+  display: block;
+}
+.single-behandelingen .uitvouw.faq ul li:nth-child(3n+1) {
+  background-color: #908055;
+}
+.single-behandelingen .uitvouw.faq ul li:nth-child(3n+1) h2,
+.single-behandelingen .uitvouw.faq ul li:nth-child(3n+1) p {
+  color: #fff;
+}
+.single-behandelingen .uitvouw.faq ul li:nth-child(3n+2) {
+  background-color: #efece4;
+}
+.single-behandelingen .uitvouw.faq ul li:nth-child(3n+2) h2.question {
+  color: #908055;
+}
+.single-behandelingen .uitvouw.faq ul li:nth-child(3n+0) {
+  background-color: #fff;
+}
+.single-behandelingen .uitvouw.faq ul li .inner {
+  padding-bottom: 20px;
+  margin-top: -20px;
 }
 
 .behandelingen ul {

@@ -7,11 +7,6 @@
  * @since      3.4.6
  * @version    3.4.6
  */
-// Create id attribute allowing for custom "anchor" value.
-$id = 'testimonial-carrousel-' . $block['id'];
-if( !empty($block['anchor']) ) {
-    $id = $block['anchor'];
-}
 
 if( isset( $block['data']['preview_image_help'] )  ) :    /* rendering in inserter preview  */
 	echo '<img src="'. $block['data']['preview_image_help'] .'" style="width:100%; height:auto;">';
@@ -30,7 +25,7 @@ $link               = get_field('rv_link');
 $margin             = get_field('rv_margin_bottom');
 $background         = get_field('rv_background_color'); ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> centered alitce section has-bg <?php if ($margin) { echo $margin; } ?> <?php if ($align) { echo $align; } ?> <?php if ($background && $background != 'no-bg') { echo 'has-bg' . ' ' .  $background; } ?>">
+<section id="testimonial-car" class="<?php echo esc_attr($className); ?> centered alitce section has-bg <?php if ($margin) { echo $margin; } ?> <?php if ($align) { echo $align; } ?> <?php if ($background && $background != 'no-bg') { echo 'has-bg' . ' ' .  $background; } ?>">
 
     <!-- Testimonial Carrousel -->
     <div class="testimonials centered">

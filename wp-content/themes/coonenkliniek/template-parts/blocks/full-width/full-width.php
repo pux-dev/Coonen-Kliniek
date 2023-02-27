@@ -24,12 +24,23 @@ $label          = get_field('text_label');
 $content        = get_field('text_content');
 $link       	= get_field('text_link');
 $width          = get_field('text_background_width');
+$sm_title  	    = get_field('text_sm_title');
 $heading_width  = get_field('text_heading_width');
 $align          = get_field('text_align');
 $margin         = get_field('text_margin_bottom');
 $background     = get_field('text_background_color'); ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> section centered alitce <?php if ($margin) { echo $margin; } ?> <?php if ($align) { echo $align; } ?> <?php if ($background) { echo 'has-bg' . ' ' .  $background; } ?> <?php if ($width == 'sm-width') { echo 'centered-sm'; } ?> <?php if ($heading_width == 'sm-width') { echo 'heading-sm'; } ?>">
+<?php 
+$classes = 'section centered alitce';
+$classes .= " " . $width .= " " . $sm_title .= " " . $heading_width .= " " . $align .= " " . $margin .= " " . $background; 
+
+if ($background) {
+    $classes .= " has-bg";
+}
+
+?>
+
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> <?php echo $classes; ?>">
        
         <div class="content">            
 

@@ -1,33 +1,51 @@
 @use '../abstracts' as *;
 
-/* ### Text Image ### */
-.page-banner {
-    background-color: $color_bg;
-    padding-top: 35px;
-    padding-bottom: 60px;
+/* ### Behandelpagina banner  ### */
+.single-behandelingen .banner {
+    .content {
+        position: absolute;
+        bottom: -40px;
+        right: calc(50% - 450px);
 
-    &.has-subnav {
-        margin-bottom: 0;
-    }
+        .content-holder {
+            width: 450px;
+            padding: 55px 65px;
+            background-color: $color_theme_gold_dark;
+            border-radius: 17px 0 17px;
+            text-transform: uppercase;
 
-    @media only screen and (max-width: 1320px) {
-        .scroll-down {
-            left: initial;
-            right: 50%;
-        }
-    }
+            .parent {
+                font-weight: 600;
+                position: relative;
+                width: -moz-fit-content;
+                width: fit-content;
 
-    @media only screen and (max-width: 1020px) {
-        .scroll-down {
-            left: initial;
-            right: 42%;
-            bottom: 70px;
-        }
-    }
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    background-color: $color_text_body;
+                    position: absolute;
+                    left: 0;
+                    bottom: -5px;
+                }
+            }
 
-    @media only screen and (max-width: 991px) {
-        .scroll-down {
-            right: 0;
+            .page-title {
+                font-size: 30px;
+                text-transform: uppercase;
+                margin-bottom: 0;
+            }
+
+            .price {
+                font-size: 19px;
+                color: #fff;
+            }
+
+            .button {
+                margin-top: 22px;
+                background-color: $color_text_body;
+            }
         }
     }
 }

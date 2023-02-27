@@ -1,9 +1,9 @@
 {
-    "key": "group_62b1ab9123615",
-    "title": "Gutenberg Tekstblok",
+    "key": "group_63f89e5ab7d18",
+    "title": "Gutenberg Prijzen\/Tarieven",
     "fields": [
         {
-            "key": "field_62b1ab9129601",
+            "key": "field_63f89e5ac0e5f",
             "label": "Content",
             "name": "",
             "aria-label": "",
@@ -20,9 +20,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_62b1ab912d076",
+            "key": "field_63f89e5ac47ee",
             "label": "Titel",
-            "name": "text_title",
+            "name": "pricing_title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -33,16 +33,16 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Tekstblok volledige breedte",
+            "default_value": "Titel van deze sectie",
+            "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": ""
         },
         {
-            "key": "field_62b1ab9130ade",
+            "key": "field_63f89e5ac81a9",
             "label": "Content",
-            "name": "text_content",
+            "name": "pricing_content",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
@@ -60,9 +60,9 @@
             "delay": 1
         },
         {
-            "key": "field_62b1ab913453e",
+            "key": "field_63f89e5acbc47",
             "label": "Button",
-            "name": "text_link",
+            "name": "pricing_link",
             "aria-label": "",
             "type": "link",
             "instructions": "",
@@ -76,7 +76,135 @@
             "return_format": "array"
         },
         {
-            "key": "field_62b1ab914a452",
+            "key": "field_63f8a22510315",
+            "label": "Prijzen",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_63f8a22e10316",
+            "label": "Prijzen",
+            "name": "pricing_items",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Nieuw prijsblok",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_63f8a24210317",
+                    "label": "Titel",
+                    "name": "pricing_items_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "70",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_63f8a22e10316"
+                },
+                {
+                    "key": "field_63f8a24f10318",
+                    "label": "Prijs",
+                    "name": "pricing_items_price",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "€",
+                    "append": ",-",
+                    "parent_repeater": "field_63f8a22e10316"
+                },
+                {
+                    "key": "field_63f8a31010319",
+                    "label": "Opties",
+                    "name": "pricing_items_options",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "table",
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Nieuwe opties",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_63f8a3301031a",
+                            "label": "Optie",
+                            "name": "pricing_items_option",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_63f8a31010319"
+                        }
+                    ],
+                    "parent_repeater": "field_63f8a22e10316"
+                }
+            ]
+        },
+        {
+            "key": "field_63f89e5acf6e0",
             "label": "Opties",
             "name": "",
             "aria-label": "",
@@ -93,9 +221,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_63442d3c26865",
+            "key": "field_63f89e5ad3180",
             "label": "Uitlijning",
-            "name": "text_align",
+            "name": "pricing_align",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -119,9 +247,9 @@
             "placeholder": ""
         },
         {
-            "key": "field_63b0534d8bf98",
+            "key": "field_63f89e5ad6c16",
             "label": "Achtergrond",
-            "name": "text_background_color",
+            "name": "pricing_background_color",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -147,9 +275,9 @@
             "placeholder": ""
         },
         {
-            "key": "field_633ad1fbb86f1",
+            "key": "field_63f89e5ada771",
             "label": "Breedte",
-            "name": "text_background_width",
+            "name": "pricing_background_width",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -173,29 +301,9 @@
             "placeholder": ""
         },
         {
-            "key": "field_63fa229cd900b",
-            "label": "Gebruik kleine titel",
-            "name": "text_sm_title",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_63c8f43b1a720",
+            "key": "field_63f89e5ade14c",
             "label": "Breedte titel",
-            "name": "text_heading_width",
+            "name": "pricing_heading_width",
             "aria-label": "",
             "type": "select",
             "instructions": "Je kunt de titel minder breed maken dan de tekst",
@@ -219,9 +327,9 @@
             "placeholder": ""
         },
         {
-            "key": "field_62b1ab91519fd",
+            "key": "field_63f89e5ae1bd5",
             "label": "Marge onderzijde",
-            "name": "text_margin_bottom",
+            "name": "pricing_margin_bottom",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -239,10 +347,10 @@
                 "no-margin": "Geen"
             },
             "default_value": "rg-margin",
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
             "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
             "ajax": 0,
             "placeholder": ""
         }
@@ -252,7 +360,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/full-width"
+                "value": "acf\/pricing"
             }
         ]
     ],
@@ -265,5 +373,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1677337282
+    "modified": 1677240169
 }

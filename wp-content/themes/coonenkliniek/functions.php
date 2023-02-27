@@ -11,7 +11,7 @@ $theme->add_namespace( 'Theme', get_template_directory() . '/src/lib' );
 // General
 define( 'THEME_NAME', explode( '/', get_template_directory() )[ count( explode( '/', get_template_directory() ) ) - 1 ] );
 define( 'TEXTDOMAIN', THEME_NAME );
-define( 'THEME_VERSION', '0.2' ); //Versienummer wordt aan css + js files meegegeven
+define( 'THEME_VERSION', '0.21' ); //Versienummer wordt aan css + js files meegegeven
 
 // Options
 define( 'EXCERPT_LENGTH', '20' );
@@ -47,6 +47,7 @@ define( 'FULLWIDTH_BLOCK', true ); //Tekstblok volledige breedte
 define( 'GALLERY', false ); //Afbeeldingen gallerij
 define( 'LATEST_NEWS', false ); //Laatste nieuwsitems
 define( 'LOGO_SECTION', true ); //Sectie met logo's
+define( 'PRICING', true ); //Sectie met prijzen
 define( 'TEXT_LIST', false ); //
 define( 'TEXTIMAGE_BLOCK', true ); //Tekstblok met afbeelding
 define( 'USP_BLOCK', true ); //Unique Selling Points
@@ -63,6 +64,9 @@ define( 'CPT_TEAM', false ); //Team
 define( 'CPT_TESTIMONIALS', true ); //Testimonials
 define( 'VACATURES', false ); //Vacatures
 
+
+
+$GLOBALS['voorbeeld'] = 'jajajajaj';
 /*
 //Widgets
 function pux_widgets_init() {

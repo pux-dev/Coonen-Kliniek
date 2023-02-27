@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+/* ### Pricing ### */
+.pricing {
+    .pricing-section {
+        column-gap: 40px;
+
+        .item {
+            background-color: $color_theme_gold;
+            padding: 25px;
+
+            h4 {
+                color: $color_text_body;
+                margin-bottom: 5px;
+            }
+
+            .price {
+                color: #fff;
+                font-size: $font_size_heading_h4;
+                font-weight: $font_weight_heading;
+                margin-bottom: 20px;
+            }
+
+            ul {
+                margin-left: 25px;
+
+                li {
+                    margin-bottom: 6px;
+                }
+            }
+        }
+    }
+}

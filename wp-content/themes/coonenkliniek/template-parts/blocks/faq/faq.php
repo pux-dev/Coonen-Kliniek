@@ -18,7 +18,7 @@ $className = 'faq';
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
 }
-
+$label          = get_field('label');
 $title          = get_field('faq_title');
 $content        = get_field('faq_content');
 $sm_title  	    = get_field('faq_sm_title');
@@ -26,7 +26,7 @@ $align  	    = get_field('faq_align');
 $margin         = get_field('faq_margin_bottom');
 $background     = get_field('faq_background_color'); ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> section centered <?php if ($stripe_bottom) { echo 'bottom'; } ?> <?php if ($margin) { echo $margin; } ?> <?php if ($align) { echo $align; } ?> <?php if ($background) { echo 'has-bg' . ' ' .  $background; } ?>">
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> section centered <?php if ($margin) { echo $margin; } ?> <?php if ($align) { echo $align; } ?> <?php if ($align) { echo $align; } ?> <?php if ($sm_title) { echo 'sm-title'; } ?> <?php if ($background) { echo 'has-bg' . ' ' .  $background; } ?>">
 	
 	<div class="content">
 		<?php if( $label ) : ?>
