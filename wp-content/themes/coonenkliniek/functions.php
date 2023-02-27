@@ -11,7 +11,7 @@ $theme->add_namespace( 'Theme', get_template_directory() . '/src/lib' );
 // General
 define( 'THEME_NAME', explode( '/', get_template_directory() )[ count( explode( '/', get_template_directory() ) ) - 1 ] );
 define( 'TEXTDOMAIN', THEME_NAME );
-define( 'THEME_VERSION', '0.21' ); //Versienummer wordt aan css + js files meegegeven
+define( 'THEME_VERSION', '0.22' ); //Versienummer wordt aan css + js files meegegeven
 
 // Options
 define( 'EXCERPT_LENGTH', '20' );

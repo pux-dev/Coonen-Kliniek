@@ -27,6 +27,15 @@
     }
 }
 
+.dark-button {
+    background-color: #000;
+
+    &:hover {
+        color: #000;
+        background-color: $color_theme_gold_dark;
+    }
+}
+
 .light-bg {
     .button {
         background-color: $color_theme_gold_dark;

@@ -7,12 +7,15 @@
  * @since      3.4.6
  * @version    3.4.6
  */
-// Create id attribute allowing for custom "anchor" value.
-$id = 'client-logos-' . $block['id'];
-if( !empty($block['anchor']) ) {
-    $id = $block['anchor'];
-}
 
+if (!is_singular( 'behandelingen' )) {
+    // Create id attribute allowing for custom "anchor" value.
+    $id = 'client-logos-' . $block['id'];
+    if( !empty($block['anchor']) ) {
+        $id = $block['anchor'];
+    }
+} 
+    
 // Create class attribute allowing for custom "className" and "align" values.
 $className = 'client-logos';
 if( !empty($block['className']) ) {
@@ -34,17 +37,21 @@ $image       	= get_field('client_logos_icon');
 $margin         = get_field('client_logos_margin_bottom');
 $background     = get_field('client_logos_background_color'); ?>
 
-
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> section aligncenter centered <?php if ($margin) { echo $margin; } ?> <?php if ($background) { echo 'has-bg' . ' ' .  $background; } ?>">
+<section <?php if (!is_singular( 'behandelingen' )) : ?>id="<?php echo esc_attr($id); ?>"<?php endif;?> class="<?php echo esc_attr($className); ?> section aligncenter centered <?php if ($margin) { echo $margin; } ?> <?php if ($background) { echo 'has-bg' . ' ' .  $background; } ?>">
 	
 	<div class="content">
 		<?php if( $label ) : ?>
 		    <p class="label"><?php echo $label; ?></p>
-		<?php endif; ?>		
-		
-		<?php if( $title ) : ?>
-		    <h2><?php echo $title; ?></h2>            
 		<?php endif; ?>
+
+        <?php 
+        if (is_singular( 'behandelingen' )) {
+            echo '<h2>Coonen Kliniek werkt uitsluitend met A-merken:</h2>';
+        } else {
+            if( $title ) : ?>
+                <h2><?php echo $title; ?></h2>            
+            <?php endif;
+        } ?>
 
 		<?php if( $content ) : ?>
 		    <?php echo $content; ?>

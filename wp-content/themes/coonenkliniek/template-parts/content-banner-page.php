@@ -27,7 +27,7 @@ $price       = get_field('behandel_price'); ?>
                 €<?php echo $price; ?>,-
             </p>
 
-            <a class="button" href="#/">Plan een intake</a>
+            <a class="button dark-button" href="#/">Plan een intake</a>
         
         </div>
         

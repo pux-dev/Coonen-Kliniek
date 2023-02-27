@@ -57,4 +57,11 @@
             }
         }
     }
+
+    .client-logos {
+        h2 {
+            font-size: $font_size_heading_h2_small;
+            color: $color_text_body;
+        }
+    }
 }

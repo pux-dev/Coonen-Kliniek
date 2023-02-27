@@ -466,7 +466,11 @@ section.main-bg .read-more::after {
 section.light-bg {
   background-color: #efece4;
 }
-section.light-bg h2 {
+section.light-bg h1,
+section.light-bg h2,
+section.light-bg h3,
+section.light-bg h4,
+section.light-bg h5 {
   color: #908055;
 }
 section.dark-bg {
@@ -878,9 +882,8 @@ footer .subfooter img {
   font-size: 19px;
   color: #fff;
 }
-.single-behandelingen .banner .content .content-holder .button {
-  margin-top: 22px;
-  background-color: #000;
+.single-behandelingen .banner .content .content-holder .button:hover {
+  background-color: #efece4;
 }
 
 .banner {
@@ -1542,6 +1545,7 @@ footer .subfooter img {
   margin-bottom: 0;
 }
 .usp .items .item h4 {
+  color: #000;
   position: relative;
   margin-bottom: 0;
   cursor: pointer;
@@ -1563,7 +1567,7 @@ footer .subfooter img {
 .usp .items .item.active h4::after {
   transform: rotate(-180deg);
 }
-.usp.dark-bg h4 {
+.usp.dark-bg .items .item h4 {
   color: #fff;
 }
 @media only screen and (max-width: 991px) {
@@ -1606,6 +1610,14 @@ footer .subfooter img {
   background-color: #000;
 }
 .main-bg .button:hover {
+  color: #000;
+  background-color: #908055;
+}
+
+.dark-button {
+  background-color: #000;
+}
+.dark-button:hover {
   color: #000;
   background-color: #908055;
 }
@@ -1929,6 +1941,10 @@ a.mail::before {
 .single-behandelingen .uitvouw.faq ul li .inner {
   padding-bottom: 20px;
   margin-top: -20px;
+}
+.single-behandelingen .client-logos h2 {
+  font-size: 20px;
+  color: #000;
 }
 
 .behandelingen ul {

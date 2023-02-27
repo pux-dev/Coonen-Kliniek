@@ -16,6 +16,7 @@
             margin-bottom: 0;
 
             h4 {
+                color: $color_text_body;
                 position: relative;
                 margin-bottom: 0;
                 cursor: pointer;
@@ -48,7 +49,7 @@
     }
 
     &.dark-bg {
-        h4 {
+        .items .item h4 {
             color: #fff;
         }
     }

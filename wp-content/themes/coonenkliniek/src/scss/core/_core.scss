@@ -245,7 +245,11 @@ section {
     &.light-bg {
         background-color: #efece4;
 
-        h2 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
             color: $color_theme_gold_dark;
         }
     }

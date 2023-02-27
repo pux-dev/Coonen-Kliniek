@@ -43,8 +43,9 @@
             }
 
             .button {
-                margin-top: 22px;
-                background-color: $color_text_body;
+                &:hover {
+                    background-color: $color_theme_gold_light;
+                }
             }
         }
     }

@@ -65,26 +65,25 @@ if ( function_exists('yoast_breadcrumb') ) {
         </ul>
         <?php endif; ?>
     </div>
-        
     <!-- \\ Uitvouw content /// -->
 
     <!-- /// CTA Button \\ -->
     <div class="section centered-sm flex jucoce">
-        <a href="#/" class="button">Plan een afspraak</a>
+        <a href="#/" class="button dark-button">Plan een afspraak</a>
     </div>
     <!-- \\ CTA Button /// -->
 
-    <div class="usp-section section">
-        
-    </div>
+    <!-- /// USP's \\ -->
+    <?php echo get_template_part( 'template-parts/blocks/usp/usp'); ?>
+    <!-- \\ USP's /// -->
 
     <!-- /// Testimonials \\ -->
-    <div class="reviews section">
         <?php get_template_part( 'template-parts/blocks/testimonials/testimonial', 'carousel' ); ?>
-    </div>
     <!-- \\ Testimonials /// -->
 
-    
+    <!-- /// Testimonials \\ -->
+    <?php get_template_part( 'template-parts/blocks/clients/client', 'logos' ); ?>
+    <!-- \\ Testimonials /// -->
 
 <!--  / content area \ -->
 

@@ -60,6 +60,51 @@
             "delay": 1
         },
         {
+            "key": "field_63fc70c6d523a",
+            "label": "Gebruik custom USP's",
+            "name": "custom_usps",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Normaliter worden de USP's getoond die je bij de <a href=\"\/wp-admin\/admin.php?page=options-theme-general\">Thema opties<\/a> hebt ingevoerd. Vink dit aan om andere USP's te gebruiken",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_63fc70b8d5239",
+            "label": "USP's",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63fc70c6d523a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_62b2fcea05394",
             "label": "USP's",
             "name": "usp",
@@ -218,7 +263,15 @@
             "type": "select",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63fc70c6d523a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -339,5 +392,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674063489
+    "modified": 1677488429
 }
